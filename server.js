@@ -7,12 +7,15 @@
 *
 */
 
-var ejs = require( 'express' );
-var path = require( 'path' );
-var http = require( 'http' );
-var fs = require( 'fs' );
+const ejs = require( 'express' );
+const path = require( 'path' );
+const http = require( 'http' );
+const fs = require( 'fs' );
+const favicon = require( 'serve-favicon' );
 
 var app = ejs();
+
+app.use( favicon( path.join( __dirname + '/ui/assets/Logo.png' ) ) ); 
 
 app.get( '/', ( request, response ) => { 
     response.sendFile( path.join( __dirname + '/ui/index.html' ) );
