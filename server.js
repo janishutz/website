@@ -1,35 +1,89 @@
-var ejs = require('express')
-var path = require('path')
-var http = require('http')
+/*
+*
+*   janishutz.com - Backend
+*       server.js
+*  
+*   Developed 2023 by Janis Hutz
+*
+*/
+
+var ejs = require( 'express' );
+var path = require( 'path' );
+var http = require( 'http' );
+var fs = require( 'fs' );
 
 var app = ejs();
 
-app.get('/', (request, response) => {
-    response.sendFile(path.join(__dirname + '/ui/index.html'));
+app.get( '/', ( request, response ) => { 
+    response.sendFile( path.join( __dirname + '/ui/index.html' ) );
 });
 
-app.get('/:filename', (request, response) => {
-    response.sendFile(path.join(__dirname + "/ui/" + request.params.filename));
+app.get( '/:filename', ( request, response ) => {
+    let fileExtension = '';
+    if ( request.params.filename.slice( request.params.filename.length - 5, request.params.filename.length ) == '.html' ) {} else {
+        fileExtension = '.html'
+    };
+    fs.readFile( path.join(__dirname + '/ui/' + request.params.filename + fileExtension ), ( err, data ) => {
+        if ( err ) {
+            response.status( 404 ).sendFile( path.join( __dirname + '/ui/404.html' ) );
+        } else {
+            response.status( 200 ).sendFile( path.join( __dirname + '/ui/' + request.params.filename + fileExtension ) );
+        };
+    });
 });
 
-app.get('/css/:file', (request, response) => {
-    response.sendFile(path.join(__dirname + "/ui/css/" + request.params.file));
+app.get( '/css/:filename', ( request, response ) => {
+    fs.readFile( path.join( __dirname + '/ui/css/' + request.params.filename ), ( err, data ) => {
+        if ( err ) {
+            response.status( 404 ).sendFile( path.join( __dirname + '/ui/404.html' ) );
+        } else {
+            response.status( 200 ).sendFile( path.join( __dirname + '/ui/css/' + request.params.filename ) );
+        };
+    });
 });
 
-app.get('/js/:file', (request, response) => {
-    response.sendFile(path.join(__dirname + "/ui/js/" + request.params.file));
+app.get( '/js/:filename', ( request, response ) => {
+    fs.readFile(path.join(__dirname + '/ui/js/' + request.params.filename), (err, data) => {
+        if (err) {
+            response.status( 404 ).sendFile( path.join( __dirname + '/ui/404.html' ) );
+        } else {
+            response.status( 200 ).sendFile( path.join( __dirname + '/ui/js/' + request.params.filename ) );
+        };
+    });
 });
 
-app.get('/projects/:file', (request, response) => {
-    response.sendFile(path.join(__dirname + "/ui/projects/" + request.params.file));
+app.get( '/projects/:filename', ( request, response ) => {
+    let fileExtension = '';
+    if ( request.params.filename.slice( request.params.filename.length - 5, request.params.filename.length ) == '.html' ) {} else {
+        fileExtension = '.html'
+    };
+    fs.readFile(path.join(__dirname + '/ui/projects/' + request.params.filename + fileExtension ), (err, data) => {
+        if (err) {
+            response.status(404).sendFile( path.join( __dirname + '/ui/404.html' ) );
+        } else {
+            response.status(200).sendFile( path.join( __dirname + '/ui/projects/' + request.params.filename + fileExtension ) );
+        };
+    });
 });
 
-app.get('/projects/css/:file', (request, response) => {
-    response.sendFile(path.join(__dirname + "/ui/css/" + request.params.file));
+app.get( '/assets/:filename', ( request, response ) => {
+    fs.readFile(path.join(__dirname + '/ui/assets/' + request.params.filename), (err, data) => {
+        if (err) {
+            response.status(404).sendFile( path.join( __dirname + '/ui/404.html' ) );
+        } else {
+            response.status(200).sendFile( path.join( __dirname + '/ui/assets/' + request.params.filename ) );
+        };
+    });
 });
 
-app.get('/assets/:file', (request, response) => {
-    response.sendFile(path.join(__dirname + "/ui/assets/" + request.params.file));
+
+// Serve 404 pages
+app.use( ( req, res, next ) => {
+    if ( req.query.lang == 'en' ) {
+        res.status( 404 ).sendFile( path.join( __dirname + '/ui/en/errorResponses/404.html' ) );
+    } else {
+        res.status( 404 ).sendFile( path.join( __dirname + '/ui/de/errorResponses/404.html' ) );
+    };
 });
 
 
