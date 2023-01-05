@@ -82,12 +82,9 @@ app.get( '/assets/:filename', ( request, response ) => {
 
 // Serve 404 pages
 app.use( ( req, res, next ) => {
-    if ( req.query.lang == 'en' ) {
-        res.status( 404 ).sendFile( path.join( __dirname + '/ui/en/errorResponses/404.html' ) );
-    } else {
-        res.status( 404 ).sendFile( path.join( __dirname + '/ui/de/errorResponses/404.html' ) );
-    };
+    res.status( 404 ).sendFile( path.join( __dirname + '/ui/404.html' ) );
 });
 
+const PORT = process.env.PORT || 8080;
 
-http.createServer( app ).listen( 8080 );
+http.createServer( app ).listen( PORT );

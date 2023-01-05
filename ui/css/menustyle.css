@@ -1,102 +1,109 @@
-  .logo {
-    width: 5%;
-    display: inline-block;
-    margin-left: 2%;
-    position: relative;
-    vertical-align: middle;
-  }
-  
-  .menu-container {
-    display: inline-flex;
-    width: 80%;
-    justify-content: center;
-  }
-  
-  .stickybox {
-    display: inline;
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0px;
-  }
-  
-  .Menu {
-    margin-top: -1%;
-    padding: 2%;
-    padding-left: 0;
-    padding-right: 0;
-    width: 100%;
-    list-style-type: none;
-    overflow: hidden;
-    background-color: #38444d;
-  }
-  
-  .menubutton {
-    text-decoration: none;
-    display: inline-block;
-    padding: 20px;
-    color: white;
-    border-radius: 0%;
-    background-color: rgba(0,0,0,0);
-  }
-  
-  .menubutton:hover {
-    border-radius: 0%;
-    animation-name: fadein;
-    animation-duration: 300ms;
-    background-color: darkblue;
-  }
-  
-  .subitems:hover {
-    animation-name: fadein;
-    animation-duration: 300ms;
-    background-color: darkblue;
-  }
-  
-  .dropdown-menu {
-    margin: 0;
-    padding: 0;
-    background-color: lightseagreen;
-    display: none;
-    list-style-type: none;
-    position: absolute;
-    min-width: 200px;
-  }
-  
-  @keyframes fadein {
-    0%  {opacity: 0;}
-    100% {opacity: 1;}
-  }
-  
-  @keyframes growDown {
-    0% {
-        transform: scaleY(0)
-    }
-    80% {
-        transform: scaleY(1.1)
-    }
-    100% {
-        transform: scaleY(1)
-    }
-  }
-  
-  @keyframes rotateMenu {
-    0% {
-        transform: rotateX(-90deg)
-    }
-    70% {
-        transform: rotateX(20deg) 
-    }
-    100% {
-        transform: rotateX(0deg) 
-    }
-  }
-  
-  .dropdown:hover .dropdown-menu {
-    display: block;
-    animation: rotateMenu 300ms ease-in-out forwards;
-  }
-  
-  .mainitems {
-    display: inline-block;
-  }
-  
+/*
+*
+*	janishutz.com - menustyle.css
+*
+*
+*		Created 2023 by Janis Hutz
+*/
+
+.Menu {
+	margin-top: -1%;
+	padding: 2%;
+	padding-left: 0;
+	padding-right: 0;
+	width: 100%;
+	overflow: hidden;
+	background-color: #38444d;
+}
+
+.logo {
+	width: 5%;
+	display: inline-block;
+	margin-left: 2%;
+	position: relative;
+	vertical-align: middle;
+}
+
+.menu-container {
+	display: inline-flex;
+	list-style-type: none;
+	width: 80%;
+	justify-content: center;
+}
+
+.stickybox {
+	display: inline;
+	position: sticky;
+	position: -webkit-sticky;
+	top: 0px;
+}
+
+.menubutton {
+	text-decoration: none;
+	display: inline-block;
+	padding: 20px;
+	color: white;
+	border-radius: 0%;
+	background-color: rgba(0,0,0,0);
+}
+
+.menubutton:hover {
+	border-radius: 0%;
+	animation-name: fadein;
+	animation-duration: 300ms;
+	background-color: darkblue;
+}
+
+.subitems:hover {
+	animation-name: fadein;
+	animation-duration: 300ms;
+	background-color: darkblue;
+}
+
+.dropdown-menu {
+	margin: 0;
+	padding: 0;
+	background-color: lightseagreen;
+	display: none;
+	list-style-type: none;
+	position: absolute;
+	min-width: 200px;
+}
+
+@keyframes fadein {
+	0%  {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@keyframes growDown {
+	0% {
+		transform: scaleY(0)
+	}
+	80% {
+		transform: scaleY(1.1)
+	}
+	100% {
+		transform: scaleY(1)
+	}
+}
+
+@keyframes rotateMenu {
+	0% {
+		transform: rotateX(-90deg)
+	}
+	70% {
+		transform: rotateX(20deg) 
+	}
+	100% {
+		transform: rotateX(0deg) 
+	}
+}
+
+.dropdown:hover .dropdown-menu {
+	display: block;
+	animation: rotateMenu 300ms ease-in-out forwards;
+}
+
+.mainitems {
+	display: inline-block;
+}
