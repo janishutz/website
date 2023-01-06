@@ -24,13 +24,13 @@ function highlightLocation () {
     let pagename = $(location).attr('pathname')
     if ( pagename.slice(0, 8) == '/project' ) {
         $('#projects').css('background-color', 'darkblue');
-    } else if ( pagename.slice(0, 6) == '/about' || pagename == '/privacypolicy' ) {
+    } else if ( pagename.slice(0, 6) == '/about' || pagename.slice(0, 14) == '/privacypolicy' ) {
         $('#about').css('background-color', 'darkblue');
-    } else if ( pagename == '/' || pagename == '/index.html' ) {
+    } else if ( pagename.slice(0, 6) == '/' || pagename == '/index.html' ) {
         $('#home').css('background-color', 'darkblue');
-    } else if ( pagename == '/support' ) {
+    } else if ( pagename.slice(0, 6) == '/support' ) {
         $('#support').css('background-color', 'darkblue');
-    } else if ( pagename == '/services' ) {
+    } else if ( pagename.slice(0, 6) == '/services' ) {
         $('#services').css('background-color', 'darkblue');
     };
 }

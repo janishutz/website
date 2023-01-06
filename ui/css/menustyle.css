@@ -7,17 +7,18 @@
 */
 
 .Menu {
+	font-size: 0.8rem;
 	margin-top: -1%;
 	padding: 2%;
 	padding-left: 0;
 	padding-right: 0;
 	width: 100%;
 	overflow: hidden;
-	background-color: #38444d;
+	background-color: rgba(56, 68, 77, 1);
 }
 
 .logo {
-	width: 5%;
+	height: 10vh;
 	display: inline-block;
 	margin-left: 2%;
 	position: relative;
@@ -25,85 +26,137 @@
 }
 
 .menu-container {
-	display: inline-flex;
-	list-style-type: none;
-	width: 80%;
-	justify-content: center;
+	display: none;
+	width: 100vw;
 }
 
-.stickybox {
-	display: inline;
-	position: sticky;
-	position: -webkit-sticky;
-	top: 0px;
+.active {
+    color: rgba(184, 214, 240, 1);
+}
+
+.listtoggle {
+    text-decoration: none;
+    color: black;
+    font-size: 2.5rem;
+    margin-right: 7%;
+    cursor: pointer;
+}
+
+.toggle-wrapper {
+    display: inline-flex;
+    height: 100%;
+    width: 70%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.menu-container, .dropdown-menu {
+	list-style: none;
 }
 
 .menubutton {
 	text-decoration: none;
-	display: inline-block;
-	padding: 20px;
-	color: white;
-	border-radius: 0%;
-	background-color: rgba(0,0,0,0);
+	width: 80%;
+	display: block;
+	padding: 2%;
+	color: white
 }
 
 .menubutton:hover {
-	border-radius: 0%;
-	animation-name: fadein;
-	animation-duration: 300ms;
 	background-color: darkblue;
 }
 
-.subitems:hover {
-	animation-name: fadein;
-	animation-duration: 300ms;
-	background-color: darkblue;
-}
+@media only screen and (min-width: 999px) {
+	.listtoggle, .toggle-wrapper {
+        display: none;
+    }
 
-.dropdown-menu {
-	margin: 0;
-	padding: 0;
-	background-color: lightseagreen;
-	display: none;
-	list-style-type: none;
-	position: absolute;
-	min-width: 200px;
-}
+	.menu-wrapper {
+		display: inline-block;
+	}
 
-@keyframes fadein {
-	0%  {opacity: 0;}
-	100% {opacity: 1;}
-}
-
-@keyframes growDown {
-	0% {
-		transform: scaleY(0)
+	.menu-container {
+		display: inline-flex;
+		list-style-type: none;
+		width: 80%;
+		justify-content: center;
 	}
-	80% {
-		transform: scaleY(1.1)
+	
+	.stickybox {
+		display: inline;
+		position: sticky;
+		position: -webkit-sticky;
+		top: 0px;
 	}
-	100% {
-		transform: scaleY(1)
+	
+	.menubutton {
+		text-decoration: none;
+		display: inline-block;
+		padding: 20px;
+		width: inherit;
+		color: white;
+		border-radius: 0%;
+		background-color: rgba(0,0,0,0);
 	}
-}
-
-@keyframes rotateMenu {
-	0% {
-		transform: rotateX(-90deg)
+	
+	.menubutton:hover {
+		border-radius: 0%;
+		animation-name: fadein;
+		animation-duration: 300ms;
+		background-color: darkblue;
 	}
-	70% {
-		transform: rotateX(20deg) 
+	
+	.subitems:hover {
+		animation-name: fadein;
+		animation-duration: 300ms;
+		background-color: darkblue;
 	}
-	100% {
-		transform: rotateX(0deg) 
+	
+	.dropdown-menu {
+		margin: 0;
+		padding: 0;
+		background-color: lightseagreen;
+		display: none;
+		list-style-type: none;
+		position: absolute;
+		min-width: 200px;
 	}
-}
-
-.dropdown:hover .dropdown-menu {
-	display: block;
-	animation: rotateMenu 300ms ease-in-out forwards;
-}
-
-.mainitems {
-	display: inline-block;
+	
+	@keyframes fadein {
+		0%  {opacity: 0;}
+		100% {opacity: 1;}
+	}
+	
+	@keyframes growDown {
+		0% {
+			transform: scaleY(0)
+		}
+		80% {
+			transform: scaleY(1.1)
+		}
+		100% {
+			transform: scaleY(1)
+		}
+	}
+	
+	@keyframes rotateMenu {
+		0% {
+			transform: rotateX(-90deg)
+		}
+		70% {
+			transform: rotateX(20deg) 
+		}
+		100% {
+			transform: rotateX(0deg) 
+		}
+	}
+	
+	.dropdown:hover .dropdown-menu {
+		display: block;
+		animation: rotateMenu 300ms ease-in-out forwards;
+	}
+	
+	.mainitems {
+		display: inline-block;
+	}
 }
