@@ -6,6 +6,11 @@
 *		Created 2023 by Janis Hutz
 */
 
+::selection {
+	background-color: darkblue;
+	color: white;
+}
+
 .Menu {
 	font-size: 0.8rem;
 	margin-top: -1%;
