@@ -64,11 +64,13 @@
 	width: 80%;
 	display: block;
 	padding: 2%;
-	color: white
+	color: white;
+	transition: 0.6s;
 }
 
 .menubutton:hover {
 	background-color: darkblue;
+	transition: 0.2s;
 }
 
 @media only screen and (min-width: 999px) {
@@ -87,13 +89,6 @@
 		justify-content: center;
 	}
 	
-	.stickybox {
-		display: inline;
-		position: sticky;
-		position: -webkit-sticky;
-		top: 0px;
-	}
-	
 	.menubutton {
 		text-decoration: none;
 		display: inline-block;
@@ -102,19 +97,13 @@
 		color: white;
 		border-radius: 0%;
 		background-color: rgba(0,0,0,0);
+		transition: 0.6s;
 	}
-	
+
 	.menubutton:hover {
 		border-radius: 0%;
-		animation-name: fadein;
-		animation-duration: 300ms;
 		background-color: darkblue;
-	}
-	
-	.subitems:hover {
-		animation-name: fadein;
-		animation-duration: 300ms;
-		background-color: darkblue;
+		transition: 0.3s;
 	}
 	
 	.dropdown-menu {
@@ -125,40 +114,22 @@
 		list-style-type: none;
 		position: absolute;
 		min-width: 200px;
-	}
-	
-	@keyframes fadein {
-		0%  {opacity: 0;}
-		100% {opacity: 1;}
+		transform-origin: top center;
+		flex-direction: column;
 	}
 	
 	@keyframes growDown {
 		0% {
-			transform: scaleY(0)
-		}
-		80% {
-			transform: scaleY(1.1)
+			transform: scaleY(0);
 		}
 		100% {
-			transform: scaleY(1)
-		}
-	}
-	
-	@keyframes rotateMenu {
-		0% {
-			transform: rotateX(-90deg)
-		}
-		70% {
-			transform: rotateX(20deg) 
-		}
-		100% {
-			transform: rotateX(0deg) 
+			transform: scaleY(1);
 		}
 	}
 	
 	.dropdown:hover .dropdown-menu {
-		display: block;
-		animation: rotateMenu 300ms ease-in-out forwards;
+		display: flex;
+		animation: growDown 0.3s ease-in-out;
 	}
 	
 	.mainitems {
