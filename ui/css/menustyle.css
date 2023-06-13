@@ -73,6 +73,10 @@
 	transition: 0.2s;
 }
 
+.sub {
+	width: 79%;
+}
+
 @media only screen and (min-width: 999px) {
 	.listtoggle, .toggle-wrapper {
         display: none;
