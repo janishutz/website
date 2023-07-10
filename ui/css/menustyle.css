@@ -50,7 +50,7 @@
 .toggle-wrapper {
     display: inline-flex;
     height: 100%;
-    width: 80%;
+    width: 70%;
     align-items: center;
     justify-content: flex-end;
 }
