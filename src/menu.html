@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=7">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>nav</title>
+        <link rel="stylesheet" href="/css/nav/toggle.css">
+        <link rel="stylesheet" href="/css/nav/menu.css">
+    </head>
+    <body>
+        <div class="nav-container">
+            <div class="nav-toggle-container">
+                <div class="nav-toggle-positioner">
+                    <div class="nav-toggle active" onclick="menu()">
+                        <span class="line" id="line1"></span>
+                        <span class="line" id="line2"></span>
+                        <span class="line" id="line3"></span>
+                    </div>
+                </div>
+            </div>
+            <div id="menu" class="open">
+                <div class="menu-container">
+                    <h2>Menu</h2>
+                    <div class="menu-main">
+                        <div class="menu-category">
+                            <h3>Projects</h3>
+                            <div class="category-list">
+                                <a href="/projects/storagemanager" class="category-item">StorageManager</a>
+                                <a href="/projects/smuL" class="category-item">SimpleMediaUpscalerLite</a>
+                                <a href="/projects/libreevent" class="category-item">libreǝvent</a>
+                                <a href="/projects/qrscanner" class="category-item">QR & Barcode Insight</a>
+                                <a href="/projects/musicplayer" class="category-item">MusicPlayer</a>
+                                <a href="/projects/biogascontrollerapp" class="category-item">BiogasControllerApp</a>
+                                <a href="/projects/impress" class="category-item">impress.js</a>
+                            </div>
+                        </div>
+                        <div class="menu-category">
+                            <h3>About</h3>
+                            <div class="category-list">
+                                <a href="/privacypolicy" class="category-item">Privacy Policy</a>
+                                <a href="/about" class="category-item">About janishutz.com</a>
+                                <a href="/about/aboutme" class="category-item">About me</a>
+                            </div>
+                        </div>
+                        <div class="menu-category">
+                            <h3>Services</h3>
+                            <div class="category-list">
+                                <a href="/services" class="category-item">Overview</a>
+                                <a href="/services/websites" class="category-item">Custom Websites</a>
+                                <a href="/services/pcbuilding" class="category-item">PC Building</a>
+                            </div>
+                        </div>
+                        <div class="menu-category">
+                            <h3>Support</h3>
+                            <div class="category-list">
+                                <a href="/support" class="category-item">Support hub</a>
+                                <a href="/support/faq" class="category-item">FAQ</a>
+                                <a href="/support/contact" class="category-item">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function menu () { 
+                $( '.menu-container' ).fadeToggle( 1000 );
+                $( '#menu' ).toggleClass( 'open' );
+                $( '.nav-toggle' ).toggleClass( 'active' );
+            }
+        </script>
+    </body>
+</html>
