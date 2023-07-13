@@ -12,21 +12,25 @@
     <body>
         <div class="nav-container">
             <div class="nav-toggle-container">
-                <div class="nav-toggle-positioner">
-                    <div class="nav-toggle active" onclick="menu()">
+                <div class="nav-toggle-positioner" onclick="menu()">
+                    <div class="nav-toggle">
                         <span class="line" id="line1"></span>
                         <span class="line" id="line2"></span>
                         <span class="line" id="line3"></span>
                     </div>
                 </div>
             </div>
-            <div id="menu" class="open">
+            <div id="menu">
                 <div class="menu-container">
-                    <h2>Menu</h2>
+                    <h2><a href="/" style="text-decoration: none; color: white;">Home</a></h2>
                     <div class="menu-main">
-                        <div class="menu-category">
+                        <div class="bottom-note">
+                            <p>Welcome to janishutz.com</p>
+                        </div>
+
+                        <div class="menu-category" onclick="dropdown( 'projects-page' )" id="projects-page-parent">
                             <h3>Projects</h3>
-                            <div class="category-list">
+                            <div class="category-list" id="projects-page">
                                 <a href="/projects/storagemanager" class="category-item">StorageManager</a>
                                 <a href="/projects/smuL" class="category-item">SimpleMediaUpscalerLite</a>
                                 <a href="/projects/libreevent" class="category-item">libreǝvent</a>
@@ -36,25 +40,25 @@
                                 <a href="/projects/impress" class="category-item">impress.js</a>
                             </div>
                         </div>
-                        <div class="menu-category">
+                        <div class="menu-category" onclick="dropdown( 'about' )" id="about-parent">
                             <h3>About</h3>
-                            <div class="category-list">
+                            <div class="category-list" id="about">
                                 <a href="/privacypolicy" class="category-item">Privacy Policy</a>
                                 <a href="/about" class="category-item">About janishutz.com</a>
                                 <a href="/about/aboutme" class="category-item">About me</a>
                             </div>
                         </div>
-                        <div class="menu-category">
+                        <div class="menu-category" onclick="dropdown( 'services' )" id="services-parent">
                             <h3>Services</h3>
-                            <div class="category-list">
+                            <div class="category-list" id="services">
                                 <a href="/services" class="category-item">Overview</a>
                                 <a href="/services/websites" class="category-item">Custom Websites</a>
                                 <a href="/services/pcbuilding" class="category-item">PC Building</a>
                             </div>
                         </div>
-                        <div class="menu-category">
+                        <div class="menu-category" onclick="dropdown( 'support' )" id="support-parent">
                             <h3>Support</h3>
-                            <div class="category-list">
+                            <div class="category-list" id="support">
                                 <a href="/support" class="category-item">Support hub</a>
                                 <a href="/support/faq" class="category-item">FAQ</a>
                                 <a href="/support/contact" class="category-item">Contact</a>
@@ -65,10 +69,18 @@
             </div>
         </div>
         <script>
+            function dropdown ( id ) {
+                if ( window.innerWidth < 999 ) {
+                    $( '#' + id + '-parent' ).toggleClass( 'menu-cateogry-active' );
+                    $( '#' + id  ).toggleClass( 'category-list-active' );
+                }
+            }
+
             function menu () { 
-                $( '.menu-container' ).fadeToggle( 1000 );
                 $( '#menu' ).toggleClass( 'open' );
                 $( '.nav-toggle' ).toggleClass( 'active' );
+                $( '.menu-container' ).toggleClass( 'shown' );
+                // $( '.menu-container' ).fadeToggle( 300 );
             }
         </script>
     </body>
