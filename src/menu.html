@@ -26,7 +26,7 @@
             </div>
             <div id="menu">
                 <div class="menu-container">
-                    <h2><a href="/" style="text-decoration: none; color: white;">Home</a></h2>
+                    <h2 style="text-align: center;">Menu</h2>
                     <div class="menu-main">
                         <div class="bottom-note-wrapper">
                             <div class="bottom-note">
@@ -43,7 +43,7 @@
                                 <a href="/projects/libreevent" class="category-item">libreǝvent</a>
                                 <a href="/projects/qrscanner" class="category-item">QR & Barcode Insight</a>
                                 <a href="/projects/musicplayer" class="category-item">MusicPlayer</a>
-                                <a href="/projects/biogascontrollerapp" class="category-item">BiogasControllerApp</a>
+                                <a href="/projects/schoolprojects" class="category-item">School projects</a>
                                 <a href="/projects/impress" class="category-item">impress.js</a>
                             </div>
                         </div>
@@ -59,15 +59,14 @@
                             <h3>Services</h3>
                             <div class="category-list" id="services">
                                 <a href="/services" class="category-item">Overview</a>
-                                <a href="/services/websites" class="category-item">Custom Websites</a>
-                                <a href="/services/pcbuilding" class="category-item">PC Building</a>
+                                <a href="https://development.janishutz.com" class="category-item">Custom Websites</a>
+                                <a href="https://pcbuilding.janishutz.com" class="category-item">PC Building</a>
                             </div>
                         </div>
                         <div class="menu-category" onclick="dropdown( 'support' )" id="support-parent">
                             <h3>Support</h3>
                             <div class="category-list" id="support">
                                 <a href="/support" class="category-item">Support hub</a>
-                                <a href="/support/faq" class="category-item">FAQ</a>
                                 <a href="/support/contact" class="category-item">Contact</a>
                             </div>
                         </div>
@@ -77,15 +76,14 @@
         </div>
         <script>
             function dropdown ( id ) {
-                if ( window.innerWidth < 999 ) {
-                    $( '#' + id + '-parent' ).toggleClass( 'menu-cateogry-active' );
-                    $( '#' + id  ).toggleClass( 'category-list-active' );
-                }
+                $( '#' + id + '-parent' ).toggleClass( 'menu-cateogry-active' );
+                $( '#' + id  ).toggleClass( 'category-list-active' );
             }
 
             function menu () { 
                 $( '#menu' ).toggleClass( 'open' );
                 $( '.nav-toggle' ).toggleClass( 'active' );
+                $( 'body' ).toggleClass( 'menuOpen' );
                 $( '.menu-container' ).fadeToggle( 100 );
                 setTimeout( () => {
                     $( '.menu-container' ).toggleClass( 'shown' );

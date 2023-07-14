@@ -57,10 +57,10 @@
 }
 
 /*  TODO: Make multiple steps for this
-    TODO: Optimise for mobile devices (scale vertically) */
+ */
 
 .menu-cateogry-active {
-    padding-right: 20vw;
+    padding-right: 20vw !important;
     transition-delay: 0s;
 }
 
