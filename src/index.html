@@ -14,28 +14,11 @@
 
 	<body>
 		<div id="nav"></div>
-		<div class="title-container">
-			<div class="title-wrapper">
-				<h1 class="title">Welcome to janishutz.com!</h1>
-				<h2 class="subtitle">iOS Apps, PC apps, Websites, PC Building & Support</h2>
-			</div>
-		</div>
 		<div class="content-wrapper">
-			<div id="popup">
-				<div class="popup-positioning">
-					<div class="popup-main">
-						<p id="popup-message"></p>
-						<button onclick="closePopup()" class="submit">Ok</button>
-					</div>
-				</div>
-				<script>
-					function closePopup () {
-						$( '#popup' ).fadeOut( 500 );
-						$( 'body' ).removeClass( 'menuOpen' );
-					}
-				</script>
-			</div>
 			<div class="content">
+				<img src="/assets/Logo.png" alt="page Logo" class="project-logo">
+				<h1 class="title">Welcome to janishutz.com!</h1>
+				<p style="text-align: center; margin-bottom: 5%;">This is the hub for all my projects which get bigger and more numerous by the day! Join in by downloading and using one or multiple of them or by ordering your own website!</p>
 				<h2 class="content-title">My work</h2>
 				<div class="sidebyside">
 					<div class="element">
@@ -76,12 +59,5 @@
 			</div>
 		</div>
 		<div id="footer"></div>
-		<script>
-			function openDetails ( message ) {
-				document.getElementById( 'popup-message' ).innerHTML = message;
-                $( '#popup' ).fadeIn( 500 );
-				$( 'body' ).addClass( 'menuOpen' );
-			}
-		</script>
 	</body>
 </html>

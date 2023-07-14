@@ -24,18 +24,6 @@ body {
 }
 
 /*
-	Style for quotes
-*/
-.bigquote {
-	width: 40%;
-	font-size: 300%;
-}
-
-.biggerquote {
-	font-size: 150%;
-}
-
-/*
 	Styling for links and buttons
 */
 .textlink {
