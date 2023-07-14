@@ -7,6 +7,7 @@
     position: fixed;
     transition: all 2s ease-in-out;
     cursor: pointer;
+    border-bottom-left-radius: 100%;
 }
 
 .nav-toggle-container {
@@ -26,6 +27,7 @@
     height: 20vh;
     width: 20vh;
     transition: all 0.5s ease-in-out;
+    border-bottom-left-radius: 100%;
 }
 
 .nav-toggle-positioner {

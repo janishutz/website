@@ -68,7 +68,7 @@ body {
 	transition: 0.3s;
 }
 
-.linkbutton {
+.button {
 	text-decoration: none;
 	display: inline-block;
 	padding: 20px;
@@ -78,7 +78,7 @@ body {
 	transition: 1s;
 }
 
-.linkbutton:hover {
+.button:hover {
   background-color: darkblue;
   border-radius: 5px;
   transition: 0.3s;

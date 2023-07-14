@@ -8,9 +8,13 @@
         <title>nav</title>
         <link rel="stylesheet" href="/css/nav/toggle.css">
         <link rel="stylesheet" href="/css/nav/menu.css">
+        <link rel="stylesheet" href="/css/nav/logo.css">
     </head>
     <body>
         <div class="nav-container">
+            <div class="logo-container">
+                <a href="/"><img src="/assets/Logo.png" alt="Website logo" id="logo"></a>
+            </div>
             <div class="nav-toggle-container">
                 <div class="nav-toggle-positioner" onclick="menu()">
                     <div class="nav-toggle">
@@ -24,8 +28,10 @@
                 <div class="menu-container">
                     <h2><a href="/" style="text-decoration: none; color: white;">Home</a></h2>
                     <div class="menu-main">
-                        <div class="bottom-note">
-                            <p>Welcome to janishutz.com</p>
+                        <div class="bottom-note-wrapper">
+                            <div class="bottom-note">
+                                <p>Welcome to janishutz.com</p>
+                            </div>
                         </div>
 
                         <div class="menu-category" onclick="dropdown( 'projects-page' )" id="projects-page-parent">
@@ -80,8 +86,12 @@
             function menu () { 
                 $( '#menu' ).toggleClass( 'open' );
                 $( '.nav-toggle' ).toggleClass( 'active' );
-                $( '.menu-container' ).toggleClass( 'shown' );
-                // $( '.menu-container' ).fadeToggle( 300 );
+                $( '.menu-container' ).fadeToggle( 100 );
+                setTimeout( () => {
+                    $( '.menu-container' ).toggleClass( 'shown' );
+                    // $( '.main-menu' ).fadeToggle( 500 );
+                    $( '.bottom-note-wrapper' ).fadeToggle( 500 );
+                }, 400 );
             }
         </script>
     </body>
