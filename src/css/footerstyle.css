@@ -9,12 +9,6 @@
     align-items: center;
 }
 
-.footer-center-box {
-    display: flex;
-    justify-content: center;
-    width: 70%;
-}
-
 .footer-logo {
     height: 50%;
     margin-bottom: 5%;
@@ -28,13 +22,22 @@
         height: 30vh;
         margin-bottom: -1%;
         flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .footer-center-box {
+        width: 40%;
+        left: 30%;
+        display: flex;
+        position: absolute;
         justify-content: center;
+        align-items: center;
     }
     
     .footer-logo {
-        width: 10%;
+        margin-left: 7%;
+        height: 90%;
         display: inline-block;
-        position: relative;
-        vertical-align: middle;
+        margin-bottom: 0;
     }
 }

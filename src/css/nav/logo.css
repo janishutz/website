@@ -11,8 +11,10 @@
 }
 
 #logo {
-    height: 70%;
-    width: 70%;
+    margin-left: 5%;
+    margin-top: 5%;
+    height: 65%;
+    width: 65%;
 }
 
 .nav-container:hover .logo-container {

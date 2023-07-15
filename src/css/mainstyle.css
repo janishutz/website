@@ -19,7 +19,6 @@ html, body {
 
 body {
 	background-color: rgba(0, 1, 73, 0.7);
-	/* background-color: rgba(0, 2, 100, 0.5); */
 	font-family: sans-serif;
 }
 
@@ -140,6 +139,12 @@ body {
 	border-radius: 20px;
 }
 
+@media only screen and (min-width: 550px) and (max-width: 998px) {
+	.project-logo {
+		margin-top: 10vh;
+		width: 50vw;
+	}
+}
 
 @media only screen and (min-width: 999px) {
 	/*
