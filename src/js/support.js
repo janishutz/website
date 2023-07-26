@@ -125,7 +125,7 @@ createApp( {
                             'action': {
                                 'type': 'link',
                                 'href': 'https://github.com/simplePCBuilding/BiogasControllerApp/wiki/Install-and-run-the-program#download-dev-versions-if-you-run-into-a-bug-then-this-may-help',
-                                'display': 'Contact'
+                                'display': 'Python installation'
                             }
                         },
                         'errconn': {
