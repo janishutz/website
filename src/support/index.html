@@ -41,6 +41,7 @@
 				align-items: center;
 				display: flex;
 				flex-direction: column;
+				overflow: scroll;
 			}
 
 			.big-button-outlined:hover {
@@ -68,6 +69,7 @@
 				border-radius: 10px;
 				transition: all 0.3s;
 				margin-top: 2%;
+				flex-shrink: 0;
 			}
 
 			.support-option.open {
@@ -105,6 +107,7 @@
 					<div id="popup">
 						<div class="popup-positioning">
 							<div class="popup-main">
+								<h3>{{ products[ selectedProduct].name }}</h3>
 								<div v-for="supportOption in products[ selectedProduct ].supportOptions" @click="toggleSupportOption( supportOption.id )" class="support-option" :id="supportOption.id + '-container'">
 									<p class="support-option-title">{{ supportOption.name }}</p>
 									<div :id="supportOption.id" class="support-option-details">
