@@ -76,9 +76,17 @@
             </div>
         </div>
         <script>
+            let activated = false;
             function dropdown ( id ) {
-                $( '#' + id + '-parent' ).toggleClass( 'menu-cateogry-active' );
-                $( '#' + id  ).toggleClass( 'category-list-active' );
+                $( '.category-list' ).removeClass( 'category-list-active' );
+                $( '.menu-category' ).removeClass( 'menu-category-active' );
+                if ( activated ) {
+                    activated = false;
+                } else {
+                    $( '#' + id + '-parent' ).addClass( 'menu-category-active' );
+                    $( '#' + id  ).addClass( 'category-list-active' );
+                    activated = true;
+                }
             }
 
             function menu () { 
@@ -88,7 +96,6 @@
                 $( '.menu-container' ).fadeToggle( 100 );
                 setTimeout( () => {
                     $( '.menu-container' ).toggleClass( 'shown' );
-                    // $( '.main-menu' ).fadeToggle( 500 );
                     $( '.bottom-note-wrapper' ).fadeToggle( 500 );
                 }, 400 );
             }

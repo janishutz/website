@@ -9,8 +9,82 @@
 		<meta name="keywords" content="software support, problem solving">
 		<meta name="description" content="Ran into a problem with one of my softwares? Get support here and have it resolved quickly and professionally.">
 		<link rel="stylesheet" href="/css/mainstyle.css">
+		<link rel="stylesheet" href="/css/pages/home.css">
 		<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 		<script defer src="/js/loader.js"></script>
+		<style>
+			#support-app {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-wrap: wrap;
+			}
+
+			.big-button-outlined {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-color: rgb(0, 0, 56);
+				color: white;
+				border-radius: 20px;
+				margin: 0.5%;
+				cursor: pointer;
+				width: 30vw;
+				height: 20vh;
+				transition: all 0.5s;
+			}
+
+			.popup-main {
+				width: 70%;
+				height: 70%;
+				justify-content: center;
+				align-items: center;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.big-button-outlined:hover {
+				background-color: rgb(0, 0, 105);
+			}
+
+			.support-option-details {
+				display: none; 
+				width: 90%; 
+				margin-left: 5%; 
+				margin-bottom: 3%;
+			}
+
+			.support-option {
+				cursor: pointer;
+				width: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				overflow: scroll;
+				margin-bottom: 0.5%;
+				height: 10vh;
+				border: white solid 3px;
+				border-radius: 10px;
+				transition: all 0.3s;
+				margin-top: 2%;
+			}
+
+			.support-option.open {
+				width: 99%;
+				height: 40vh;
+				overflow-y: scroll;
+				justify-content: flex-start;
+			}
+
+			.support-option-title {
+				margin: 0;
+			}
+
+			.support-option.open .support-option-title {
+				margin-top: 2vh;
+			}
+		</style>
 	</head>
 	<body>
 		<div id="nav"></div>
@@ -25,9 +99,29 @@
 				<hr class="pullquote-lines">
 				<p>First off all, I want to apologise for any inconvenience that arose due to a problem with any of my software.</p>
 				<p>Please choose the app you have problems with below:</p>
-				<p>Work in progress. Please use <a href="/support/contact">Contact</a> if you have any questions regarding my software or any kind of problems</p>
+				<div id="support-app">
+					<div class="big-button-outlined" v-for="product in products" @click="openPopup( product.id )">{{ product.name }}</div>
+
+					<div id="popup">
+						<div class="popup-positioning">
+							<div class="popup-main">
+								<div v-for="supportOption in products[ selectedProduct ].supportOptions" @click="toggleSupportOption( supportOption.id )" class="support-option" :id="supportOption.id + '-container'">
+									<p class="support-option-title">{{ supportOption.name }}</p>
+									<div :id="supportOption.id" class="support-option-details">
+										<p v-html="supportOption.display"></p>
+										<a :href="supportOption.action.href" class="submit" style="text-decoration: none;">{{ supportOption.action.display }}</a>
+									</div>
+								</div>
+								<button @click="closePopup()" class="submit">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div id="footer"></div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="/js/support.js"></script>
 	</body>
 </html>
