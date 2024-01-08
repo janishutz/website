@@ -1,0 +1,27 @@
+{
+  "src/sitemap.xml": {
+    "Protocol": "https",
+    "DomainName": "janishutz.com",
+    "Root": "./src",
+    "IncludeExt": [
+      ".html",
+      ".php"
+    ],
+    "Exclude": [
+      "404.html",
+      "footer.html",
+      "menu.html",
+      "search/index.html"
+    ],
+    "TagsToInclude": [
+      "priority"
+    ],
+    "DefaultChangeFrequency": "monthly",
+    "TabCharacters": "\t",
+    "bIncludeWWW": true,
+    "bRemoveFileExtentions": false,
+    "bUseTrailingSlash": false,
+    "bAutomaticallyUpdateSitemap": true,
+    "bMinimized": false
+  }
+}
