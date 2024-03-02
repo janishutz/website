@@ -3,32 +3,7 @@
 	<url>
 		<loc>https://www.janishutz.com</loc>
 		<priority>1.00</priority>
-		<lastmod>NaN-NaN-NaN</lastmod>
-	</url>
-	<url>
-		<loc>https://www.janishutz.com/about</loc>
-		<priority>0.67</priority>
-		<lastmod>NaN-NaN-NaN</lastmod>
-	</url>
-	<url>
-		<loc>https://www.janishutz.com/presentations</loc>
-		<priority>0.67</priority>
-		<lastmod>NaN-NaN-NaN</lastmod>
-	</url>
-	<url>
-		<loc>https://www.janishutz.com/privacypolicy</loc>
-		<priority>0.67</priority>
-		<lastmod>NaN-NaN-NaN</lastmod>
-	</url>
-	<url>
-		<loc>https://www.janishutz.com/projects</loc>
-		<priority>0.67</priority>
-		<lastmod>NaN-NaN-NaN</lastmod>
-	</url>
-	<url>
-		<loc>https://www.janishutz.com/services</loc>
-		<priority>0.67</priority>
-		<lastmod>NaN-NaN-NaN</lastmod>
+		<lastmod>2024-03-02</lastmod>
 	</url>
 	<url>
 		<loc>https://www.janishutz.com/support</loc>
@@ -36,47 +11,37 @@
 		<lastmod>2024-02-20</lastmod>
 	</url>
 	<url>
-		<loc>https://www.janishutz.com/about/aboutme</loc>
-		<priority>0.33</priority>
+		<loc>https://www.janishutz.com/services</loc>
+		<priority>0.67</priority>
+		<lastmod>2024-03-02</lastmod>
+	</url>
+	<url>
+		<loc>https://www.janishutz.com/projects</loc>
+		<priority>0.67</priority>
+		<lastmod>2024-03-02</lastmod>
+	</url>
+	<url>
+		<loc>https://www.janishutz.com/privacypolicy</loc>
+		<priority>0.67</priority>
 		<lastmod>NaN-NaN-NaN</lastmod>
 	</url>
 	<url>
-		<loc>https://www.janishutz.com/presentations/auth</loc>
-		<priority>0.33</priority>
-		<lastmod>2024-02-20</lastmod>
+		<loc>https://www.janishutz.com/presentations</loc>
+		<priority>0.67</priority>
+		<lastmod>2024-03-02</lastmod>
 	</url>
 	<url>
-		<loc>https://www.janishutz.com/projects/impress</loc>
-		<priority>0.33</priority>
+		<loc>https://www.janishutz.com/about</loc>
+		<priority>0.67</priority>
 		<lastmod>NaN-NaN-NaN</lastmod>
 	</url>
 	<url>
-		<loc>https://www.janishutz.com/projects/languageschoolhossegor-booking</loc>
+		<loc>https://www.janishutz.com/support/js-disabled</loc>
 		<priority>0.33</priority>
-		<lastmod>NaN-NaN-NaN</lastmod>
+		<lastmod>2024-03-02</lastmod>
 	</url>
 	<url>
-		<loc>https://www.janishutz.com/projects/libreevent</loc>
-		<priority>0.33</priority>
-		<lastmod>NaN-NaN-NaN</lastmod>
-	</url>
-	<url>
-		<loc>https://www.janishutz.com/projects/musicplayer</loc>
-		<priority>0.33</priority>
-		<lastmod>NaN-NaN-NaN</lastmod>
-	</url>
-	<url>
-		<loc>https://www.janishutz.com/projects/qrscanner</loc>
-		<priority>0.33</priority>
-		<lastmod>NaN-NaN-NaN</lastmod>
-	</url>
-	<url>
-		<loc>https://www.janishutz.com/projects/schoolprojects</loc>
-		<priority>0.33</priority>
-		<lastmod>NaN-NaN-NaN</lastmod>
-	</url>
-	<url>
-		<loc>https://www.janishutz.com/projects/smuL</loc>
+		<loc>https://www.janishutz.com/support/contact</loc>
 		<priority>0.33</priority>
 		<lastmod>NaN-NaN-NaN</lastmod>
 	</url>
@@ -86,13 +51,48 @@
 		<lastmod>NaN-NaN-NaN</lastmod>
 	</url>
 	<url>
-		<loc>https://www.janishutz.com/support/contact</loc>
+		<loc>https://www.janishutz.com/projects/smuL</loc>
 		<priority>0.33</priority>
 		<lastmod>NaN-NaN-NaN</lastmod>
 	</url>
 	<url>
-		<loc>https://www.janishutz.com/support/js-disabled</loc>
+		<loc>https://www.janishutz.com/projects/schoolprojects</loc>
+		<priority>0.33</priority>
+		<lastmod>NaN-NaN-NaN</lastmod>
+	</url>
+	<url>
+		<loc>https://www.janishutz.com/projects/qrscanner</loc>
+		<priority>0.33</priority>
+		<lastmod>NaN-NaN-NaN</lastmod>
+	</url>
+	<url>
+		<loc>https://www.janishutz.com/projects/musicplayer</loc>
+		<priority>0.33</priority>
+		<lastmod>2024-03-02</lastmod>
+	</url>
+	<url>
+		<loc>https://www.janishutz.com/projects/libreevent</loc>
+		<priority>0.33</priority>
+		<lastmod>NaN-NaN-NaN</lastmod>
+	</url>
+	<url>
+		<loc>https://www.janishutz.com/projects/languageschoolhossegor-booking</loc>
+		<priority>0.33</priority>
+		<lastmod>NaN-NaN-NaN</lastmod>
+	</url>
+	<url>
+		<loc>https://www.janishutz.com/projects/impress</loc>
+		<priority>0.33</priority>
+		<lastmod>NaN-NaN-NaN</lastmod>
+	</url>
+	<url>
+		<loc>https://www.janishutz.com/presentations/auth</loc>
 		<priority>0.33</priority>
 		<lastmod>2024-02-20</lastmod>
+	</url>
+	<url>
+		<loc>https://www.janishutz.com/about/aboutme</loc>
+		<priority>0.33</priority>
+		<lastmod>NaN-NaN-NaN</lastmod>
 	</url>
 </urlset>
