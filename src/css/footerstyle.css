@@ -41,3 +41,13 @@
         margin-bottom: 0;
     }
 }
+
+
+#matomo-opt-out {
+    display: block;
+    width: 40%;
+    background-color: rgba(0, 0, 0, 0) !important;
+    color: white;
+    padding: 20px;
+    margin-left: 15px;
+}
