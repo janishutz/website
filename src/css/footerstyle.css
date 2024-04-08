@@ -47,7 +47,7 @@
     display: block;
     width: 40%;
     background-color: rgba(0, 0, 0, 0) !important;
-    color: white;
+    color: white !important;
     padding: 20px;
     margin-left: 15px;
 }
