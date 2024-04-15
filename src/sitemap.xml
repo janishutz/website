@@ -8,7 +8,7 @@
 	<url>
 		<loc>https://www.janishutz.com/legal</loc>
 		<priority>0.75</priority>
-		<lastmod>2024-04-08</lastmod>
+		<lastmod>2024-04-15</lastmod>
 	</url>
 	<url>
 		<loc>https://www.janishutz.com/legal/privacy</loc>
@@ -43,7 +43,12 @@
 	<url>
 		<loc>https://www.janishutz.com/legal/tos</loc>
 		<priority>0.50</priority>
-		<lastmod>2024-04-08</lastmod>
+		<lastmod>2024-04-15</lastmod>
+	</url>
+	<url>
+		<loc>https://www.janishutz.com/legal/returns</loc>
+		<priority>0.50</priority>
+		<lastmod>2024-04-15</lastmod>
 	</url>
 	<url>
 		<loc>https://www.janishutz.com/about/aboutme</loc>
