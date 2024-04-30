@@ -1,0 +1,195 @@
+/*
+*
+*	janishutz.com - mainstyle.css
+*
+*
+*		Created 2023 by Janis Hutz
+*/
+
+/*
+	Set size of html and body to full width
+*/
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: calc(14pt + 0.395vw);
+}
+
+body {
+	background-color: rgba(70, 72, 167, 0.5);
+	font-family: sans-serif;
+}
+
+/*
+	Style for quotes
+*/
+.bigquote {
+	width: 40%;
+	font-size: 300%;
+}
+
+.biggerquote {
+	font-size: 150%;
+}
+
+/*
+	Styling for the main content element
+*/
+.mainstyle {
+	margin-right: 5%;
+	margin-left: 5%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	padding: 5%;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	border-color: black;
+	border-style: none;
+	border-radius: 50px;
+	background-color: rgba(195, 195, 229, 1);
+}
+
+
+/*
+	Styling for links and buttons
+*/
+.textlink {
+	font-size: 100%;
+	text-decoration: none;
+	color: black;
+	transition: 1s;
+}
+
+.textlink:hover {
+	color: darkblue;
+	font-size: 115%;
+	transition: 0.3s;
+}
+
+.linkbutton {
+	text-decoration: none;
+	display: inline-block;
+	padding: 20px;
+	color: white;
+	background-color:rgba(0, 40, 131, 1);
+	border-radius: 25px;
+	transition: 1s;
+}
+
+.linkbutton:hover {
+  background-color: darkblue;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.references {
+  color: gray;
+}
+
+/*
+	This styles the container for the home page
+*/
+.title-container {
+	background-image: url('/assets/codeSnippet.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 40vh;
+	border-radius: 20px;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.title {
+	text-align: center;
+	font-size: 2.3rem;
+}
+
+.subtitle {
+	text-align: center;
+	font-size: 1.3rem;
+}
+
+.content {
+	font-size: 1rem;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 5%;
+	margin-bottom: 10%;
+}
+
+.content-title {
+	font-size: 3rem;
+	text-align: center;
+}
+
+.content-title-small {
+	font-size: 2rem;
+	text-align: center;
+}
+
+.pullquote-lines {
+	border-color: black;
+	margin-bottom: 2%;
+	margin-top: 2%;
+	width: 100%;
+}
+
+/* 
+	Bottom container styling
+*/
+
+.bottom {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.element {
+	text-align: center;
+}
+
+
+@media only screen and (min-width: 999px) {
+	/*
+		Align content side by side
+	*/
+	.sidebyside {
+		width: 100%;
+		display: flex;
+		flex-grow: 1;
+		gap: 5%;
+	}
+
+	.element {
+		width: 47%;
+	}
+
+	.itemsInline {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		gap: 5%;
+		margin-top: 3%;
+		margin-bottom: 3%;
+	}
+
+	.mainstyle {
+		margin-right: 10%;
+		margin-left: 10%;
+		padding: 10%;
+		padding-top: 5%;
+		padding-bottom: 5%;
+	}
+}

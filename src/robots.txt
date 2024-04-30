@@ -1,8 +1,0 @@
-User-agent: *
-Disallow: /menu.html
-Disallow: /footer.html
-Disallow: /js/
-Disallow: /css/
-Disallow: /404.html
-
-Sitemap: https://janishutz.com/sitemap.xml
