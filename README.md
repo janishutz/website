@@ -1,5 +1,5 @@
 <div id="title" align="center">
-    <img src="./srchttps://static.janishutz.com/logo.png" width="300">
+    <img src="https://static.janishutz.com/logo.png" width="300">
     <h1>janishutz.com</h1>
 </div>
 
