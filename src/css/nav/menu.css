@@ -65,7 +65,7 @@
 }
 
 .category-list {
-    background-color: rgb(18, 12, 59);
+    background-color: #152b5c;
     transition: all 0.5s;
     transform: scaleY( 0 );
     position: absolute;
