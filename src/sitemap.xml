@@ -11,22 +11,7 @@
 		<lastmod>2024-05-20</lastmod>
 	</url>
 	<url>
-		<loc>https://www.janishutz.com/support</loc>
-		<priority>0.67</priority>
-		<lastmod>2024-05-20</lastmod>
-	</url>
-	<url>
-		<loc>https://www.janishutz.com/services</loc>
-		<priority>0.67</priority>
-		<lastmod>2024-05-20</lastmod>
-	</url>
-	<url>
-		<loc>https://www.janishutz.com/projects</loc>
-		<priority>0.67</priority>
-		<lastmod>2024-05-20</lastmod>
-	</url>
-	<url>
-		<loc>https://www.janishutz.com/presentations</loc>
+		<loc>https://www.janishutz.com/legal/privacy</loc>
 		<priority>0.67</priority>
 		<lastmod>2024-05-20</lastmod>
 	</url>
@@ -36,22 +21,32 @@
 		<lastmod>2024-05-20</lastmod>
 	</url>
 	<url>
-		<loc>https://www.janishutz.com/legal/privacy</loc>
+		<loc>https://www.janishutz.com/presentations</loc>
 		<priority>0.67</priority>
 		<lastmod>2024-05-20</lastmod>
 	</url>
 	<url>
-		<loc>https://www.janishutz.com/projects/store</loc>
+		<loc>https://www.janishutz.com/projects</loc>
+		<priority>0.67</priority>
+		<lastmod>2024-05-20</lastmod>
+	</url>
+	<url>
+		<loc>https://www.janishutz.com/services</loc>
+		<priority>0.67</priority>
+		<lastmod>2024-05-20</lastmod>
+	</url>
+	<url>
+		<loc>https://www.janishutz.com/support</loc>
+		<priority>0.67</priority>
+		<lastmod>2024-05-20</lastmod>
+	</url>
+	<url>
+		<loc>https://www.janishutz.com/legal/licenses</loc>
 		<priority>0.50</priority>
 		<lastmod>2024-05-20</lastmod>
 	</url>
 	<url>
-		<loc>https://www.janishutz.com/legal/returns</loc>
-		<priority>0.50</priority>
-		<lastmod>2024-05-20</lastmod>
-	</url>
-	<url>
-		<loc>https://www.janishutz.com/legal/tos</loc>
+		<loc>https://www.janishutz.com/projects/arch-dev-vm</loc>
 		<priority>0.50</priority>
 		<lastmod>2024-05-20</lastmod>
 	</url>
@@ -61,32 +56,52 @@
 		<lastmod>2024-05-20</lastmod>
 	</url>
 	<url>
-		<loc>https://www.janishutz.com/projects/arch-dev-vm</loc>
-		<priority>0.50</priority>
-		<lastmod>2024-04-30</lastmod>
-	</url>
-	<url>
-		<loc>https://www.janishutz.com/legal/licenses</loc>
+		<loc>https://www.janishutz.com/legal/tos</loc>
 		<priority>0.50</priority>
 		<lastmod>2024-05-20</lastmod>
 	</url>
 	<url>
-		<loc>https://www.janishutz.com/support/js-disabled</loc>
+		<loc>https://www.janishutz.com/legal/returns</loc>
+		<priority>0.50</priority>
+		<lastmod>2024-05-20</lastmod>
+	</url>
+	<url>
+		<loc>https://www.janishutz.com/projects/store</loc>
+		<priority>0.50</priority>
+		<lastmod>2024-05-20</lastmod>
+	</url>
+	<url>
+		<loc>https://www.janishutz.com/about/aboutme</loc>
 		<priority>0.33</priority>
 		<lastmod>2024-05-20</lastmod>
 	</url>
 	<url>
-		<loc>https://www.janishutz.com/support/contact</loc>
+		<loc>https://www.janishutz.com/presentations/auth</loc>
 		<priority>0.33</priority>
 		<lastmod>2024-05-20</lastmod>
 	</url>
 	<url>
-		<loc>https://www.janishutz.com/projects/storagemanager</loc>
+		<loc>https://www.janishutz.com/projects/impress</loc>
 		<priority>0.33</priority>
 		<lastmod>2024-04-30</lastmod>
 	</url>
 	<url>
-		<loc>https://www.janishutz.com/projects/smuL</loc>
+		<loc>https://www.janishutz.com/projects/languageschoolhossegor-booking</loc>
+		<priority>0.33</priority>
+		<lastmod>2024-04-30</lastmod>
+	</url>
+	<url>
+		<loc>https://www.janishutz.com/projects/libreevent</loc>
+		<priority>0.33</priority>
+		<lastmod>2024-05-20</lastmod>
+	</url>
+	<url>
+		<loc>https://www.janishutz.com/projects/musicplayer</loc>
+		<priority>0.33</priority>
+		<lastmod>2024-05-20</lastmod>
+	</url>
+	<url>
+		<loc>https://www.janishutz.com/projects/qrscanner</loc>
 		<priority>0.33</priority>
 		<lastmod>2024-04-30</lastmod>
 	</url>
@@ -96,47 +111,32 @@
 		<lastmod>2024-04-30</lastmod>
 	</url>
 	<url>
-		<loc>https://www.janishutz.com/projects/qrscanner</loc>
+		<loc>https://www.janishutz.com/projects/smuL</loc>
+		<priority>0.33</priority>
+		<lastmod>2024-05-20</lastmod>
+	</url>
+	<url>
+		<loc>https://www.janishutz.com/projects/storagemanager</loc>
 		<priority>0.33</priority>
 		<lastmod>2024-04-30</lastmod>
 	</url>
 	<url>
-		<loc>https://www.janishutz.com/projects/musicplayer</loc>
+		<loc>https://www.janishutz.com/support/contact</loc>
 		<priority>0.33</priority>
 		<lastmod>2024-05-20</lastmod>
 	</url>
 	<url>
-		<loc>https://www.janishutz.com/projects/libreevent</loc>
+		<loc>https://www.janishutz.com/support/js-disabled</loc>
 		<priority>0.33</priority>
-		<lastmod>2024-05-20</lastmod>
-	</url>
-	<url>
-		<loc>https://www.janishutz.com/projects/languageschoolhossegor-booking</loc>
-		<priority>0.33</priority>
-		<lastmod>2024-04-30</lastmod>
-	</url>
-	<url>
-		<loc>https://www.janishutz.com/projects/impress</loc>
-		<priority>0.33</priority>
-		<lastmod>2024-04-30</lastmod>
-	</url>
-	<url>
-		<loc>https://www.janishutz.com/presentations/auth</loc>
-		<priority>0.33</priority>
-		<lastmod>2024-05-20</lastmod>
-	</url>
-	<url>
-		<loc>https://www.janishutz.com/about/aboutme</loc>
-		<priority>0.33</priority>
-		<lastmod>2024-05-20</lastmod>
-	</url>
-	<url>
-		<loc>https://www.janishutz.com/legal/licences/gpl</loc>
-		<priority>0.25</priority>
 		<lastmod>2024-05-20</lastmod>
 	</url>
 	<url>
 		<loc>https://www.janishutz.com/legal/licences/proprietary</loc>
+		<priority>0.25</priority>
+		<lastmod>2024-05-20</lastmod>
+	</url>
+	<url>
+		<loc>https://www.janishutz.com/legal/licences/gpl</loc>
 		<priority>0.25</priority>
 		<lastmod>2024-05-20</lastmod>
 	</url>
