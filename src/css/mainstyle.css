@@ -9,15 +9,19 @@
 /*
 	Set size of html and body to full width
 */
-html, body {
+html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
 	width: 100%;
 	height: 100%;
 	margin: 0;
 	padding: 0;
 	font-size: calc(14pt + 0.395vw);
-}
-
-body {
 	background-color: rgb(105, 144, 189);
 	font-family: sans-serif;
 }
@@ -80,7 +84,7 @@ body {
 */
 
 .content-wrapper {
-	width: 100%;
+	width: 100vw;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -195,4 +199,8 @@ body {
 		width: auto;
 		height: 40vh;
 	}
+}
+
+#footer {
+	width: 100vw;
 }
