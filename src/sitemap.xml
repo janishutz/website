@@ -3,12 +3,12 @@
 	<url>
 		<loc>https://www.janishutz.com</loc>
 		<priority>1.00</priority>
-		<lastmod>2024-06-05</lastmod>
+		<lastmod>2024-06-24</lastmod>
 	</url>
 	<url>
 		<loc>https://www.janishutz.com/legal</loc>
 		<priority>0.75</priority>
-		<lastmod>2024-05-20</lastmod>
+		<lastmod>2024-06-26</lastmod>
 	</url>
 	<url>
 		<loc>https://www.janishutz.com/support</loc>
@@ -39,6 +39,11 @@
 		<loc>https://www.janishutz.com/legal/privacy</loc>
 		<priority>0.67</priority>
 		<lastmod>2024-05-20</lastmod>
+	</url>
+	<url>
+		<loc>https://www.janishutz.com/legal/support-status</loc>
+		<priority>0.50</priority>
+		<lastmod>2024-06-26</lastmod>
 	</url>
 	<url>
 		<loc>https://www.janishutz.com/services/dms-deg</loc>
