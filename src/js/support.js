@@ -76,7 +76,7 @@ createApp( {
                             'display': 'Please head to GitHub and open an issue',
                             'action': {
                                 'type': 'link',
-                                'href': 'https://github.com/simplePCBuilding/SimpleMediaUpscalerLite/issues/new',
+                                'href': 'https://github.com/janishutz/SimpleMediaUpscalerLite/issues/new',
                                 'display': 'Open an Issue'
                             }
                         }
@@ -92,7 +92,7 @@ createApp( {
                             'display': 'Please head to GitHub and open an issue',
                             'action': {
                                 'type': 'link',
-                                'href': 'https://github.com/simplePCBuilding/libreevent/issues/new',
+                                'href': 'https://github.com/janishutz/libreevent/issues/new',
                                 'display': 'Open an Issue'
                             }
                         }
@@ -108,7 +108,7 @@ createApp( {
                             'display': 'MusicPlayer Version 2.0 is not yet completed. Version 1 will not receive any more updates and is deprecated',
                             'action': {
                                 'type': 'link',
-                                'href': 'https://github.com/simplePCBuilding/MusicPlayerV2',
+                                'href': 'https://github.com/janishutz/MusicPlayerV2',
                                 'display': 'GitHub'
                             }
                         }
@@ -124,7 +124,7 @@ createApp( {
                             'display': 'As this app is not digitally signed, Windows will warn you about running the app. The app is totally safe, so you can allow it to run. If it does not work, consider downloading the app, installing python with all necessary dependencies (see link below) and running it that way.',
                             'action': {
                                 'type': 'link',
-                                'href': 'https://github.com/simplePCBuilding/BiogasControllerApp/wiki/Install-and-run-the-program#download-dev-versions-if-you-run-into-a-bug-then-this-may-help',
+                                'href': 'https://github.com/janishutz/BiogasControllerApp/wiki/Install-and-run-the-program#download-dev-versions-if-you-run-into-a-bug-then-this-may-help',
                                 'display': 'Python installation'
                             }
                         },
@@ -134,7 +134,7 @@ createApp( {
                             'display': 'Please first follow the steps the app gives you when you press the details button on the error message. If these steps do not work, please head to our wiki where things are explained in a more detailed manner. If these steps also do not help, please contact me using the <a href="/support/contact">contact form</a>!',
                             'action': {
                                 'type': 'link',
-                                'href': 'https://github.com/simplePCBuilding/BiogasControllerApp/wiki/Connect-a-Microcontroller',
+                                'href': 'https://github.com/janishutz/BiogasControllerApp/wiki/Connect-a-Microcontroller',
                                 'display': 'Wiki'
                             }
                         },
