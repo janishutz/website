@@ -1,0 +1,73 @@
+/*
+*				ConductorCalc - scroll.css
+*
+*	Created by Janis Hutz 01/17/2024, Licensed under a proprietary License
+*			https://janishutz.com, development@janishutz.com
+*
+*
+*/
+
+#scroll-indicator {
+    position: fixed;
+    right: 5%;
+    z-index: 7;
+    width: 90%;
+    bottom: 5%;
+    display: none;
+}
+
+.content {
+    scroll-snap-type: y mandatory;
+}
+
+.snap {
+    scroll-snap-align: top;
+}
+
+
+.scroll-wrapper {
+    color: rgb(221, 221, 221);
+    font-size: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    user-select: none;
+}
+
+.scroll-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 15px;
+    background-color: rgba( 0, 0, 0, 0.2 );
+    border-radius: 30px;
+}
+
+.scroll-symbol {
+    font-size: 180%;
+    animation: scroll-animation infinite 4s ease-in-out;
+}
+
+@keyframes scroll-animation {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    10% {
+        opacity: 1;
+    }
+    65% {
+        opacity: 0.8;
+    }
+    75% {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    100% {
+        opacity: 0;
+    }    
+}

@@ -1,0 +1,3 @@
+# Components
+
+This folder contains all kinds of templates for my websites. These are all (almost) ready to go components I can simply grab, slightly adapt and use directly without having to re-implement everything from scratch. You are allowed to use these components on your own website, but you are not allowed to claim them to be your own work, if you haven't adapted them, but simply added your own images or similar to them.
