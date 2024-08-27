@@ -62,7 +62,7 @@ function sliderGoToIndex ( index: number ) {
                 currentSlideIndex = index;
                 setTimeout( () => {
                     okToMove = true;
-                }, 750 );
+                }, 500 );
             }, 1000 );
         } else if ( index < 0 ) {
             sliderGoToIndex( sliderElements.length - 1 );
