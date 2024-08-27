@@ -1,50 +1,88 @@
-<div class="nav-link-wrapper">
-    <div class="nav-link-header">
-        <span class="material-symbols-outlined">lightbulb</span>
-        <a href="/projects">Projects</a>
-    </div>
-    <div class="nav-link-dropdown">
-        <a href="/projects">View all</a>
-        <a href="/projects/storagemanager">StorageManager</a>
-        <a href="/projects/qrscanner">QR & Barcode Insight</a>
-        <a href="/projects/libreevent">libreǝvent</a>
+<div class="nav-placeholder"></div>
+
+<div class="nav-top-bar">
+    <img src="https://static.janishutz.com/logo.jpg" alt="janishutz.com logo" class="logo">
+    <div class="nav-toggle" onclick="openMenu( 'toggle' )">
+        <span class="line" id="line1"></span>
+        <span class="line" id="line2"></span>
+        <span class="line" id="line3"></span>
     </div>
 </div>
 
-<div class="nav-link-wrapper">
-    <div class="nav-link-header">
-        <span class="material-symbols-outlined">build</span>
-        <a href="/services">Services</a>
+<div class="nav-menu">
+    <div class="nav-link-wrapper">
+        <a class="nav-link-header" href="/projects">
+            <span class="material-symbols-outlined nav-icon">lightbulb</span>
+            <div>Projects</div>
+        </a>
+        <div class="nav-link-dropdown">
+            <a href="/projects">View all</a>
+            <a href="/projects/storagemanager">StorageManager</a>
+            <a href="/projects/qrscanner">QR & Barcode Insight</a>
+            <a href="/projects/libreevent">libreǝvent</a>
+        </div>
     </div>
-    <div class="nav-link-dropdown">
-        <a href="https://store.janishutz.com">Store</a>
-        <a href="https://id.janishutz.com">Account</a>
-        <a href="https://development.janishutz.com">Custom Websites</a>
+
+    <div class="nav-link-wrapper">
+        <a class="nav-link-header" href="/services">
+            <span class="material-symbols-outlined nav-icon">build</span>
+            <div>Services</div>
+        </a>
+        <div class="nav-link-dropdown">
+            <a href="https://store.janishutz.com">Store</a>
+            <a href="https://id.janishutz.com">Account</a>
+            <a href="https://development.janishutz.com">Custom Websites</a>
+        </div>
+    </div>
+
+    <img src="https://static.janishutz.com/logo.jpg" alt="janishutz.com logo" class="logo">
+
+    <div class="nav-link-wrapper">
+        <a class="nav-link-header" href="/about">
+            <span class="material-symbols-outlined nav-icon">info</span>
+            <div>About</div>
+        </a>
+        <div class="nav-link-dropdown">
+            <a href="/about">About janishutz.com</a>
+            <a href="/about/aboutme">About Janis Hutz</a>
+            <a href="/legal">Legal</a>
+        </div>
+    </div>
+
+    <div class="nav-link-wrapper">
+        <a class="nav-link-header" href="/projects">
+            <span class="material-symbols-outlined nav-icon">support_agent</span>
+            <div>Support</div>
+        </a>
+        <div class="nav-link-dropdown">
+            <a href="https://support.janishutz.com">Support Hub</a>
+            <a href="https://support.janishutz.com/knowledgebase.php">Knowledgebase</a>
+            <a href="/support/old">Old websites</a>
+        </div>
     </div>
 </div>
 
-<img src="https://static.janishutz.com/logo.jpg" alt="janishutz.com logo" class="logo">
+<script>
+    const toggle = document.getElementsByClassName( 'nav-toggle' )[ 0 ];
+    const menu = document.getElementsByClassName( 'nav-menu' )[ 0 ];
+    const bar = document.getElementsByClassName( 'nav-top-bar' )[ 0 ];
+    let isAllowedToScroll = true;
 
-<div class="nav-link-wrapper">
-    <div class="nav-link-header">
-        <span class="material-symbols-outlined">info</span>
-        <a href="/about">About</a>
-    </div>
-    <div class="nav-link-dropdown">
-        <a href="/about">About janishutz.com</a>
-        <a href="/about/aboutme">About Janis Hutz</a>
-        <a href="/legal">Legal</a>
-    </div>
-</div>
-
-<div class="nav-link-wrapper">
-    <div class="nav-link-header">
-        <span class="material-symbols-outlined">support_agent</span>
-        <a href="/projects">Support</a>
-    </div>
-    <div class="nav-link-dropdown">
-        <a href="https://support.janishutz.com">Support Hub</a>
-        <a href="https://support.janishutz.com/knowledgebase.php">Knowledgebase</a>
-        <a href="/support/old">Old websites</a>
-    </div>
-</div>
+    function openMenu( action ) {
+        if ( action === 'toggle' ) {
+            if ( menu.classList.contains( 'active' ) ) {
+                openMenu( 'close' );
+            } else {
+                openMenu( 'open' );
+            }
+        } else if ( action === 'close' ) {
+            isAllowedToScroll = true;
+            menu.classList.remove( 'active' );
+            toggle.classList.remove( 'active' );
+        } else if ( action === 'open' ) {
+            isAllowedToScroll = false;
+            toggle.classList.add( 'active' );
+            menu.classList.add( 'active' );
+        }
+    }
+</script>
