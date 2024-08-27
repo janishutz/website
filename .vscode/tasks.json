@@ -1,0 +1,14 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "build",
+			"path": "site",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "Build website",
+			"detail": "node build.js"
+		}
+	]
+}
