@@ -24,10 +24,11 @@
                 <div class="slider-element" style="background-image: url( 'https://store-cdn.janishutz.com/assets/promo-images/libreevent-desktop.jpg' );"></div>
                 <div class="slider-element" style="background-image: url( 'https://store-cdn.janishutz.com/assets/promo-images/donate-desktop.jpg' );"></div>
             </div>
-            <div class="slider-controls slider-control-left">&#11164;</div>
-            <div class="slider-controls slider-control-right">&#11166;</div>
+            <div class="slider-controls slider-control-left" onclick="sliderControl( 'previous' )">&#11164;</div>
+            <div class="slider-controls slider-control-right" onclick="sliderControl( 'next' )">&#11166;</div>
         </div>
 
         <script src="/js/slider.js"></script>
+        <script>activateSlider( 5000 )</script>
     </body>
 </html>
