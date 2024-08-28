@@ -35,7 +35,9 @@
         </div>
     </div>
 
-    <img src="https://static.janishutz.com/logo.jpg" alt="janishutz.com logo" class="logo">
+    <a href="/" class="logo-wrapper">
+        <img src="https://static.janishutz.com/logo.jpg" alt="janishutz.com logo" class="logo">
+    </a>
 
     <div class="nav-link-wrapper">
         <a class="nav-link-header" href="/about">
@@ -66,7 +68,6 @@
     const toggle = document.getElementsByClassName( 'nav-toggle' )[ 0 ];
     const menu = document.getElementsByClassName( 'nav-menu' )[ 0 ];
     const bar = document.getElementsByClassName( 'nav-top-bar' )[ 0 ];
-    let isAllowedToScroll = true;
 
     function openMenu( action ) {
         if ( action === 'toggle' ) {
@@ -76,11 +77,11 @@
                 openMenu( 'open' );
             }
         } else if ( action === 'close' ) {
-            isAllowedToScroll = true;
             menu.classList.remove( 'active' );
             toggle.classList.remove( 'active' );
+            document.body.classList.remove( 'no-scroll' );
         } else if ( action === 'open' ) {
-            isAllowedToScroll = false;
+            document.body.classList.add( 'no-scroll' );
             toggle.classList.add( 'active' );
             menu.classList.add( 'active' );
         }

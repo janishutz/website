@@ -1,3 +1,9 @@
+footer {
+    border-top: solid black 1px;
+    background-color: rgb(226, 226, 226);
+    width: 100vw;
+}
+
 footer .logo {
     height: 40vh;
 }

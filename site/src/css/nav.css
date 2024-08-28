@@ -8,10 +8,15 @@ nav {
     height: 20vh;
 }
 
-.nav-menu .logo {
+.nav-menu .logo-wrapper {
     display: none;
     height: 90%;
     border-radius: 20px;
+    overflow: hidden;
+}
+
+.nav-menu .logo {
+    height: 100%;
 }
 
 nav a {
@@ -136,7 +141,7 @@ nav a {
 
 
 @media only screen and (min-width: 900px) {
-    .nav-menu .logo {
+    .nav-menu .logo-wrapper {
         display: unset;
     }
 
@@ -147,6 +152,7 @@ nav a {
     .nav-menu {
         padding: 0;
         height: 20vh;
+        width: 100vw;
         justify-content: center;
         align-items: center;
         flex-direction: row;
