@@ -60,6 +60,7 @@ nav a {
     display: flex;
     align-items: center;
     z-index: 100;
+    border-bottom: black 1px solid;
 }
 
 .nav-top-bar .logo {
@@ -158,6 +159,7 @@ nav a {
         flex-direction: row;
         top: 0;
         left: 0;
+        border-bottom: black 1px solid;
     }
 
     .nav-link-dropdown {

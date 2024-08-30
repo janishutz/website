@@ -52,6 +52,11 @@
 }
 
 .slider-element.past {
+    z-index: 2;
+    left: 0;
+}
+
+.slider-element.last {
     z-index: 3;
     left: 0;
 }

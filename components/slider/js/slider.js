@@ -10,6 +10,7 @@ function sliderGoToIndex(index) {
             // Determine next and previous elements
             let previousElement = 0;
             let nextElement = 0;
+            let beforePreviousElement = 0;
             if (index < sliderElements.length - 1) {
                 nextElement = index + 1;
             }
@@ -21,6 +22,15 @@ function sliderGoToIndex(index) {
             }
             else {
                 previousElement = index - 1;
+            }
+            if (index === 0) {
+                beforePreviousElement = sliderElements.length - 2;
+            }
+            else if (index === 1) {
+                beforePreviousElement = sliderElements.length - 1;
+            }
+            else {
+                beforePreviousElement = index - 2;
             }
             // Determine move direction:
             // true = next, false = previous
@@ -34,6 +44,7 @@ function sliderGoToIndex(index) {
             // New current element
             sliderElements[index].classList.add('current');
             sliderElements[index].classList.remove('next');
+            sliderElements[index].classList.remove('last');
             sliderElements[index].classList.remove('past');
             // New next element
             if (moveDirection) {
@@ -44,10 +55,16 @@ function sliderGoToIndex(index) {
             }
             sliderElements[nextElement].classList.remove('current');
             sliderElements[nextElement].classList.remove('past');
+            sliderElements[nextElement].classList.remove('last');
             // new past element
-            sliderElements[previousElement].classList.add('past');
+            sliderElements[previousElement].classList.add('last');
             sliderElements[previousElement].classList.remove('current');
+            sliderElements[previousElement].classList.remove('past');
             sliderElements[previousElement].classList.remove('next');
+            sliderElements[beforePreviousElement].classList.add('past');
+            sliderElements[beforePreviousElement].classList.remove('last');
+            sliderElements[beforePreviousElement].classList.remove('next');
+            sliderElements[beforePreviousElement].classList.remove('current');
             // Glitch fixes
             setTimeout(() => {
                 if (moveDirection) {
@@ -57,7 +74,7 @@ function sliderGoToIndex(index) {
                 currentSlideIndex = index;
                 setTimeout(() => {
                     okToMove = true;
-                }, 750);
+                }, 500);
             }, 1000);
         }
         else if (index < 0) {
