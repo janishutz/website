@@ -1,0 +1,29 @@
+.wrapfig-wrapper {
+    width: 80%;
+    position: relative;
+}
+
+.wrapfig {
+    width: 40%;
+}
+
+.wrapfig.left {
+    float: left;
+}
+
+.wrapfig.right {
+    float: left;
+}
+
+.wrapfig-text {
+    margin: 5px;
+    width: 58%;
+}
+
+.wrapfig-text.left {
+    margin-right: auto;
+}
+
+.wrapfig-text.right {
+    margin-left: auto;
+}

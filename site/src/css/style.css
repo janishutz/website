@@ -93,6 +93,19 @@ body {
     margin: 5px;
 }
 
+.text-center {
+    text-align: center;
+}
+
+.rounded-corners {
+    border: none;
+    border-radius: 20px;
+}
+
+.no-margin {
+    margin: 5px;
+}
+
 @media only screen and (min-width: 550px) and (max-width: 998px) {
 	.project-logo {
 		margin-top: 10vh;
