@@ -30,6 +30,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    min-height: 80vh;
 }
 
 .no-scroll {
@@ -50,31 +51,63 @@ body {
     background-color: rgb(2, 10, 27);
 }
 
-.project-logo {
-    width: 40%;
-    border-radius: 30px;
-}
 
 
 .pullquote-lines {
-	border-color: black;
+    border-color: black;
 	margin-bottom: 2%;
 	margin-top: 2%;
 	width: 100%;
 }
 
 .quotes-text {
-	font-size: 150%;
+    font-size: 150%;
 	font-style: italic;
 	font-weight: normal;
 	text-align: center;
 }
 
 .quotes-author {
-	text-align: right;
+    text-align: right;
 	font-style: italic;
 	width: 80%;
 	margin-right: auto;
 	font-weight: lighter;
 	margin-top: 0;
+}
+
+
+.project-logo {
+    margin-top: 12vh;
+    width: 80vw;
+    height: auto;
+    border-radius: 20px;
+}
+
+.inline-elements {
+    display: flex;
+    flex-direction: column;
+}
+
+.inline-elements * {
+    margin: 5px;
+}
+
+@media only screen and (min-width: 550px) and (max-width: 998px) {
+	.project-logo {
+		margin-top: 10vh;
+		width: 50vw;
+	}
+}
+
+@media only screen and (min-width: 999px) {
+	.project-logo {
+		margin-top: 4vh;
+		width: auto;
+		height: 40vh;
+	}
+
+    .inline-elements {
+        flex-direction: row;
+    }
 }
