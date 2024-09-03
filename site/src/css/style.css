@@ -54,3 +54,27 @@ body {
     width: 40%;
     border-radius: 30px;
 }
+
+
+.pullquote-lines {
+	border-color: black;
+	margin-bottom: 2%;
+	margin-top: 2%;
+	width: 100%;
+}
+
+.quotes-text {
+	font-size: 150%;
+	font-style: italic;
+	font-weight: normal;
+	text-align: center;
+}
+
+.quotes-author {
+	text-align: right;
+	font-style: italic;
+	width: 80%;
+	margin-right: auto;
+	font-weight: lighter;
+	margin-top: 0;
+}
