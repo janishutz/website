@@ -12,8 +12,53 @@
     right: 5%;
     z-index: 7;
     width: 90%;
+    bottom: -200px;
+}
+
+#scroll-indicator.show-scroll {
+    animation: pop-in 0.5s;
     bottom: 5%;
-    display: none;
+}
+
+#scroll-indicator.hide-scroll {
+    animation: pop-out 0.5s;
+    bottom: -200px;
+}
+
+@keyframes pop-in {
+    0% {
+        bottom: -200px;
+    }
+
+    70% {
+        bottom: 6.5%;
+    }
+
+    80% {
+        bottom: 6%;
+    }
+
+    100% {
+        bottom: 5%;
+    }
+}
+
+@keyframes pop-out {
+    0% {
+        bottom: 5%;
+    }
+
+    25% {
+        bottom: 6.5%
+    }
+
+    35% {
+        bottom: 6%;
+    }
+
+    100% {
+        bottom: -200px;
+    }
 }
 
 .content {

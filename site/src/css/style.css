@@ -26,6 +26,10 @@ body {
 
 .content {
     width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .no-scroll {
@@ -38,4 +42,15 @@ body {
     color: white;
     text-decoration: none;
     border-radius: 10px;
+    transition: all 0.5s;
+}
+
+.button:hover {
+    border-radius: 5px;
+    background-color: rgb(2, 10, 27);
+}
+
+.project-logo {
+    width: 40%;
+    border-radius: 30px;
 }
