@@ -29,14 +29,8 @@ window.scrollHint = ( maxScroll ) => {
         timeout = setTimeout( () => { showHint() }, 2500 );
     }
 
-    document.onscrollend = () => {
-        scrollCorrectionTimeout = setTimeout( () => {
-            scrollCorrection();
-        }, 1000 );
-        timeout = setTimeout( () => { 
-            showHint();
-        }, 2500 );
-    }
+    let lastScrollTimeStamp = new Date().getTime();
+    let scrollInterval = 0;
     document.onscroll = () => {
         try {
             clearTimeout( timeout );
@@ -49,6 +43,25 @@ window.scrollHint = ( maxScroll ) => {
             el.classList.remove( 'show-scroll' );
             el.classList.add( 'hide-scroll' );
         }
+
+        if ( scrollInterval === 0 ) {
+            scrollInterval = setInterval( () => {
+                if ( lastScrollTimeStamp < new Date().getTime() + 500 ) {
+                    scrollCorrectionTimeout = setTimeout( () => {
+                        scrollCorrection();
+                    }, 1000 );
+                    timeout = setTimeout( () => { 
+                        showHint();
+                    }, 2500 );
+                    try {
+                        clearInterval( scrollInterval );
+                        scrollInterval = 0;
+                    } catch ( e ) { /* empty */ }
+                }
+            }, 250 );
+        }
+
+        lastScrollTimeStamp = new Date().getTime();        
     };
 
     window.onresize = () => {
