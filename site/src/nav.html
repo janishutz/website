@@ -84,6 +84,22 @@
             document.body.classList.add( 'no-scroll' );
             toggle.classList.add( 'active' );
             menu.classList.add( 'active' );
+            bar.classList.remove( 'slide-up' );
+            menu.classList.remove( 'slide-up' );
         }
     }
+
+    let oldScroll = 0;
+    document.addEventListener( 'scroll', () => {
+        if ( oldScroll < window.scrollY && window.innerHeight * 0.2 < window.scrollY ) {
+            bar.classList.add( 'slide-up' );
+            menu.classList.add( 'slide-up' );
+        } else if ( oldScroll > window.scrollY ) {
+            bar.classList.remove( 'slide-up' );
+            menu.classList.remove( 'slide-up' );
+        }
+        oldScroll = window.scrollY;
+    } );
+
+    // TODO: Hide menu on when scrolling down
 </script>

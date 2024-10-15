@@ -1,4 +1,4 @@
-<div>
+<div class="footer-container">
     <img src="https://static.janishutz.com/logo.jpg" alt="janishutz.com logo" class="logo">
     <div class="footer-text-container">
         <div class="footer-category">
@@ -26,14 +26,38 @@
             <a href="/legal/privacy">Privacy Policy</a>
             <a href="/legal/tos">Terms of Service</a>
             <a href="/legal/returns">Return policy</a>
-            <a href="/legal/tos">Return policy</a>
+            <a href="/support/support-status">Support Status</a>
         </div>
 
-        <!-- Matomo stuff -->
-        <div id="matomo-opt-out"></div>
-		<script src="https://analytics.janishutz.com/index.php?module=CoreAdminHome&action=optOutJS&divId=matomo-opt-out&language=auto&backgroundColor=000000&fontColor=FFFFFF&fontSize=12px&fontFamily=monospace&showIntro=1"></script>
-        <!-- Matomo Image Tracker-->
-		<img referrerpolicy="no-referrer-when-downgrade" src="https://analytics.janishutz.com/matomo.php?idsite=2&amp;rec=1" style="border:0" alt="" />
-		<!-- End Matomo -->
+        <div class="analytics-notice" id="analytics">
+            <h2>Analytics</h2>
+            <p>This website uses privacy preserving product analytics allowing me to analyze aggregated statistics for this website. All data collected will not allow me to uniquely identify you. <br><a href="/legal/privacy">Privacy Policy</a></p>
+            <!-- Matomo stuff -->
+            <div id="matomo-opt-out">
+                Loading...
+            </div>
+            <script src="https://analytics.janishutz.com/index.php?module=CoreAdminHome&action=optOutJS&divId=matomo-opt-out&language=auto&fontColor=000000&fontSize=12px&fontFamily=monospace&showIntro=1"></script>
+            <!-- Matomo Image Tracker-->
+            <img referrerpolicy="no-referrer-when-downgrade" src="https://analytics.janishutz.com/matomo.php?idsite=2&amp;rec=1" style="border:0" alt="" />
+            <!-- End Matomo -->
+
+            <button class="analytics-button" onclick="closeAnalytics()"><span class="material-symbols-outlined">close</span></button>
+
+            <div class="small-symbol" onclick="showAnalytics()" title="Change your analytics preferences"><span class="material-symbols-outlined">Analytics</span></div>
+        </div>
     </div>
+    <script>
+        function closeAnalytics () {
+            document.getElementById( 'analytics' ).classList.remove( 'show' );
+            localStorage.setItem( 'analytics-dismissed', 'true' );
+        }
+
+        function showAnalytics () {
+            document.getElementById( 'analytics' ).classList.add( 'show' );
+        }
+
+        if ( !localStorage.getItem( 'analytics-dismissed' ) ) {
+            document.getElementById( 'analytics' ).classList.add( 'show' );
+        }
+    </script>
 </div>

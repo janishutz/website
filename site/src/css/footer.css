@@ -8,3 +8,96 @@ footer {
 footer .logo {
     height: 40vh;
 }
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-text-container {
+    display: flex;
+    flex-direction: row;
+    min-width: calc( ( 100% - 40vh - 50px ) / 2 );
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-category {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-category a {
+    color: black;
+    text-decoration: none;
+    transition: all 0.5s;
+    font-size: 1rem;
+}
+
+.footer-category a:hover {
+    color: rgb(21, 43, 92);
+    font-size: 1.1rem;
+}
+
+
+/* 
+    Analytics 
+*/
+.analytics-notice {
+    z-index: 10000;
+    bottom: -450px;
+    right: 5px;
+    width: 300px;
+    height: 400px;
+    position: fixed;
+    background-color: rgb(193, 193, 223);
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+    transition: bottom 1s;
+}
+
+.analytics-notice.show {
+    bottom: 5px;
+}
+
+.analytics-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.analytics-notice .small-symbol {
+    position: fixed;
+    bottom: -3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgb(193, 193, 223);
+    border: solid black 1px;
+    cursor: pointer;
+    transition: all 1s;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    right: 10px;
+    transition-delay: 2s;
+    z-index: 10001;
+    font-size: 1.5rem;
+}
+
+.analytics-notice.show .small-symbol {
+    bottom: -100px;
+    transition-delay: 0s;
+}
