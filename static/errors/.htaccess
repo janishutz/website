@@ -1,0 +1,2 @@
+ErrorDocument 503 /unavailable.html
+ErrorDocument 500 /errors.html
