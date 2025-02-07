@@ -1,0 +1,49 @@
+.timeline {
+    position: relative;
+    display: block;
+    flex-direction: column;
+    height: 100%;
+}
+
+.timeline-el {
+    z-index: 3;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+    background: none;
+}
+
+.timeline-dot {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(21, 43, 92);
+    border-radius: 20px;
+}
+
+.timeline-year {
+    margin-right: 20px;
+    color: rgb(63, 63, 63);
+    font-style: italic;
+    width: 5rem;
+}
+
+.timeline-desc {
+    font-style: italic;
+    font-weight: lighter;
+    margin-left: 20px;
+    max-width: calc( 100% - 5rem - 60px );
+}
+
+.timeline-line {
+    position: absolute;
+    z-index: 1;
+    height: calc(100% - 10px);
+    top: 5px;
+    width: 4px;
+    background-color: rgb(110, 110, 110);
+    display: flex;
+    left: calc( 5rem + 28px );
+}
