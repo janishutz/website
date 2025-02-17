@@ -1,3 +1,38 @@
+<script>
+    // Themeing
+    let loadedTheme = localStorage.getItem( 'theme' ) ?? 'auto';
+    var theme = loadedTheme;
+    let loadTheme = () => {
+        loadedTheme = localStorage.getItem( 'theme' ) ?? 'auto';
+        if ( loadedTheme === 'auto' ) {
+            if ( window.matchMedia( '(prefers-color-scheme: dark)' ).matches ) {
+                theme = 'dark_mode';
+            } else {
+                theme = 'light_mode';
+            }
+        }
+        if ( theme === 'dark_mode' ) {
+            document.documentElement.classList.remove( 'light' );
+            document.documentElement.classList.add( 'dark' );
+        } else {
+            document.documentElement.classList.add( 'light' );
+            document.documentElement.classList.remove( 'dark' );
+            theme === 'light_mode';
+        }
+    }
+    loadTheme();
+
+    setTimeout( () => {
+        document.querySelector( 'body' ).classList.add( 'loaded' );
+    }, 500 );
+
+    function changeTheme () {
+        theme = document.getElementById( 'theme-select' ).value;
+        localStorage.setItem( 'theme', theme );
+        loadTheme();
+    }
+</script>
+
 <div class="nav-placeholder"></div>
 
 <div class="nav-top-bar">

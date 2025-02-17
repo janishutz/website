@@ -49,7 +49,7 @@ nav a {
     flex-direction: column;
     z-index: 100;
     background-color: var( --color-background-accent );
-    transition: all 0.5s;
+    transition: left 0.5s, top 0.5s;
 }
 
 .nav-top-bar {
