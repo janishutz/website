@@ -23,7 +23,7 @@ nav {
 
 nav a {
     /* TODO: Update colours */
-    color: black;
+    color: var( --color-text-primary );
     text-decoration: none;
 }
 
@@ -48,7 +48,7 @@ nav a {
     display: flex;
     flex-direction: column;
     z-index: 100;
-    background-color: rgb(226, 226, 226);
+    background-color: var( --color-background-accent );
     transition: all 0.5s;
 }
 
@@ -58,7 +58,7 @@ nav a {
     left: 0;
     width: 100vw;
     height: 20vh;
-    background-color: rgb(226, 226, 226);
+    background-color: var( --color-background-accent );
     display: flex;
     align-items: center;
     z-index: 100;
@@ -102,7 +102,7 @@ nav a {
     margin-left: auto;
     margin-right: 20px;
     text-decoration: none;
-    color: black;
+    color: var( --color-text-primary );
     font-size: 5vh;
     cursor: pointer;
     width: 35px;
@@ -118,7 +118,7 @@ nav a {
     display: block;
     width: 100%;
     height: 2px;
-    background-color: black;
+    background-color: var( --color-text-primary );
 }
 
 #line1 {
@@ -166,7 +166,7 @@ nav a {
         flex-direction: row;
         top: 0;
         left: 0;
-        border-bottom: black 1px solid;
+        border-bottom: var( --color-text-primary ) 1px solid;
     }
 
     .nav-menu.slide-up {
@@ -183,7 +183,7 @@ nav a {
         width: max-content;
         transform-origin: top;
         transition: transform 0.5s;
-        background-color: white;
+        background-color: var( --color-background-primary );
         border-radius: 10px;
         padding: 15px;
         z-index: 2;
@@ -212,7 +212,7 @@ nav a {
 
     .nav-link-header::before, .nav-link-header::after {
         opacity: 0;
-        border: white 15px solid;
+        border: var( --color-background-primary ) 15px solid;
         border-top-color: transparent;
         width: 20px;
         height: 20px;
@@ -240,7 +240,7 @@ nav a {
     }
     
     .nav-link-wrapper:hover .nav-link-header {
-        background-color: white;
+        background-color: var( --color-background-primary );
     }
     
     .nav-link-wrapper:hover .nav-link-dropdown {

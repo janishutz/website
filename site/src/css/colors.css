@@ -1,0 +1,15 @@
+#theme-switcher-icon {
+    font-size: 1rem;
+    margin-right: 5px;
+}
+
+.theme-selector {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.slider-controls {
+    background-color: var( --color-background-accent ) !important;
+}

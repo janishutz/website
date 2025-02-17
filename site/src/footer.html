@@ -14,6 +14,14 @@
             <h3>Info</h3>
             <a href="/about">About janishutz.com</a>
             <a href="/about/aboutme">About Janis Hutz</a>
+            <div class="theme-selector">
+                <span class="material-symbols-outlined" id="theme-switcher-icon">light_mode</span>
+                <select id="theme-select" onchange="changeTheme()">
+                    <option value="auto">Auto</option>
+                    <option value="light_mode">Light</option>
+                    <option value="dark_mode">Dark</option>
+                </select>
+            </div>
         </div>
         <div class="footer-category">
             <h3>Support</h3>
@@ -58,6 +66,36 @@
 
         if ( !localStorage.getItem( 'analytics-dismissed' ) ) {
             document.getElementById( 'analytics' ).classList.add( 'show' );
+        }
+
+        // Themeing
+        let loadedTheme = localStorage.getItem( 'theme' ) ?? 'auto';
+        var theme = loadedTheme;
+        let loadTheme = () => {
+            loadedTheme = localStorage.getItem( 'theme' ) ?? 'auto';
+            if ( loadedTheme === 'auto' ) {
+                if ( window.matchMedia( '(prefers-color-scheme: dark)' ).matches ) {
+                    theme = 'dark_mode';
+                } else {
+                    theme = 'light_mode';
+                }
+            }
+            if ( theme === 'dark_mode' ) {
+                document.documentElement.classList.remove( 'light' );
+                document.documentElement.classList.add( 'dark' );
+            } else {
+                document.documentElement.classList.add( 'light' );
+                document.documentElement.classList.remove( 'dark' );
+                theme === 'light_mode';
+            }
+        }
+        loadTheme();
+        document.getElementById( 'theme-select' ).value = loadedTheme;
+
+        function changeTheme () {
+            theme = document.getElementById( 'theme-select' ).value;
+            localStorage.setItem( 'theme', theme );
+            loadTheme();
         }
     </script>
 </div>

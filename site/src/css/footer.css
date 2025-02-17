@@ -1,6 +1,6 @@
 footer {
     border-top: solid black 1px;
-    background-color: rgb(226, 226, 226);
+    background-color: var( --color-background-accent );
     width: 100vw;
     margin-top: 40px;
 }
@@ -32,14 +32,14 @@ footer .logo {
 }
 
 .footer-category a {
-    color: black;
+    color: var( --color-text-primary );
     text-decoration: none;
     transition: all 0.5s;
     font-size: 1rem;
 }
 
 .footer-category a:hover {
-    color: rgb(21, 43, 92);
+    color: var( --color-button-hover );
     font-size: 1.1rem;
 }
 
@@ -54,7 +54,7 @@ footer .logo {
     width: 300px;
     height: 400px;
     position: fixed;
-    background-color: rgb(193, 193, 223);
+    background-color: var( --color-background-analytics );
     border-radius: 20px;
     padding: 10px;
     text-align: center;
@@ -70,6 +70,7 @@ footer .logo {
 }
 
 .analytics-button {
+    color: var( --color-text-primary );
     position: absolute;
     top: 10px;
     right: 10px;
@@ -79,12 +80,16 @@ footer .logo {
     cursor: pointer;
 }
 
+#matomo-opt-out {
+    color: var( --color-text-primary ) !important;
+}
+
 .analytics-notice .small-symbol {
     position: fixed;
     bottom: -3px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    background-color: rgb(193, 193, 223);
+    background-color: var( --color-background-analytics );
     border: solid black 1px;
     cursor: pointer;
     transition: all 1s;

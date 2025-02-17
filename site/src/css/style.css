@@ -1,9 +1,48 @@
 @import url( 'https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap' );
 @import url( 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200' );
 @import url( '/css/nav.css' );
+@import url( '/css/colors.css' );
 @import url( '/css/footer.css' );
 
+/* Color Theme */
+:root, :root.light {
+    --color-text-primary: black;
+    --color-text-accent: #303030;
+    --color-link: rgb(10, 10, 100);
+    --color-background-primary: white;
+    --color-background-accent: rgb(226, 226, 226);
+    --color-background-analytics: rgb(193, 193, 223);
+    --color-button: rgb(21, 43, 92);
+    --color-button-hover: rgb(2, 10, 27);
+}
 
+:root.dark {
+    --color-text-primary: white;
+    --color-text-accent: #b5b5b5;
+    --color-link: rgb(0, 70, 150);
+    --color-background-primary: #151515;
+    --color-background-accent: black;
+    --color-background-analytics: #303030;
+    --color-button: rgb(20, 150, 200);
+    --color-button-hover: rgb(15, 125, 175);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-text-primary: white;
+        --color-text-accent: #b5b5b5;
+        --color-link: rgb(0, 70, 150);
+        --color-background-primary: #151515;
+        --color-background-accent: black;
+        --color-background-analytics: #303030;
+        --color-button: rgb(20, 150, 200);
+        --color-button-hover: rgb(15, 125, 175);
+    }
+}
+
+/* 
+ * MAIN 
+ */
 body {
     height: 100%;
     width: 100%;
@@ -14,6 +53,8 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: var( --color-background-primary );
+    color: var( --color-text-primary );
 }
 
 .material-symbols-outlined {
@@ -39,7 +80,7 @@ body {
 
 .button {
     padding: 20px;
-    background-color: rgb(21, 43, 92);
+    background-color: var( --color-button );
     color: white;
     text-decoration: none;
     border-radius: 10px;
@@ -48,13 +89,13 @@ body {
 
 .button:hover {
     border-radius: 5px;
-    background-color: rgb(2, 10, 27);
+    background-color: var( --color-button-hover );
 }
 
 
 
 .pullquote-lines {
-    border-color: black;
+    border-color: var( --color-text-primary );
 	margin-bottom: 2%;
 	margin-top: 2%;
 	width: 100%;
