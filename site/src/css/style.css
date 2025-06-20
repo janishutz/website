@@ -97,6 +97,22 @@ body.loaded {
     background-color: var( --color-button-hover );
 }
 
+.divider {
+    width: 100%;
+	margin-bottom: 2%;
+	margin-top: 2%;
+    border-color: var( --color-text-primary );
+}
+
+.slider-element {
+    background-color: lightblue;
+}
+
+.slider-info {
+    display: flex;
+    flex-direction: column;
+}
+
 
 
 .pullquote-lines {
