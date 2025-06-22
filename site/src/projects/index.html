@@ -40,86 +40,137 @@
                 style="background-image: url( 'https://store-cdn.janishutz.com/assets/libreevent/libreevent-title.jpg' );">
                 <a href="/projects/libreevent" class="button" style="margin-top: 30%;">libreǝvent</a>
             </div>
-            <div class="slider-element"
-                style="background-image: url( 'https://store-cdn.janishutz.com/assets/libreevent/libreevent-title.jpg' );">
-                <a href="/projects/storagemanager" class="button" style="margin-top: 30%;">Storagemanager</a>
+            <div class="slider-element current"
+                style="background-image: url( 'https://static.janishutz.com/assets/projects/conductorcalc-title.jpg' );">
+                <a href="https://conductorcalc.com" class="button" style="margin-top: 30%;">ConductorCalc</a>
             </div>
             <div class="slider-element"
-                style="background-image: url( 'https://store-cdn.janishutz.com/assets/libreevent/libreevent-title.jpg' );">
+                style="background-image: url( 'https://static.janishutz.com/assets/projects/storagemanager-title.jpg' );">
+                <a href="/projects/storagemanager" class="button" style="margin-top: 30%;">StorageManager</a>
+            </div>
+            <div class="slider-element"
+                style="background-image: url( 'https://static.janishutz.com/assets/projects/qrscanner-title.jpg' );">
                 <a href="/projects/qrscanner" class="button" style="margin-top: 30%;">QR &amp; Barcode Insight</a>
             </div>
+            <!-- TODO: Make sure that margins are okay -->
             <div class="slider-element"
-                style="background-image: url( 'https://store-cdn.janishutz.com/assets/libreevent/libreevent-title.jpg' );">
+                style="background-image: url( 'https://static.janishutz.com/assets/projects/store-title.jpg' );">
                 <a href="/projects/store" class="button" style="margin-top: 30%;">Store</a>
             </div>
             <div class="slider-element"
-                style="background-image: url( 'https://store-cdn.janishutz.com/assets/libreevent/libreevent-title.jpg' );">
+                style="background-image: url( 'https://static.janishutz.com/assets/projects/musicplayer-title.jpg' );">
                 <a href="/projects/musicplayer" class="button" style="margin-top: 30%;">MusicPlayer</a>
             </div>
         </div>
-        <!-- TODO: Move to different icons, as on iOS that is broken (of course it is) -->
-        <div class="slider-controls slider-control-left" onclick="sliderControl( 'previous' )">&#11164;</div>
-        <div class="slider-controls slider-control-right" onclick="sliderControl( 'next' )">&#11166;</div>
+        <span class="slider-controls slider-control-left material-symbols-outlined"
+            onclick="sliderControl( 'previous' )">arrow_back</span>
+        <span class="slider-controls slider-control-right material-symbols-outlined"
+            onclick="sliderControl( 'next' )">arrow_forward
+    </div>
     </div>
 
     <div class="content">
-        <!-- TODO: Size logo better -->
         <img src="https://static.janishutz.com/logo.jpg" alt="janishutz logo" class="project-logo">
         <h1>Projects</h1>
 
-        <p>Discover all of my software projects</p>
+        <p>Discover my software projects</p>
+
+        <hr class="divider" style="margin-top: 75px;">
 
         <h2 id="foss">Open Source Projects</h2>
+        <p>Projects you can use for free, that have their source code publicly available and you can help develop</p>
+        <p>You may find all of them <a href="https://github.com/janishutz?tab=repositories" target="_blank">here</a></p>
         <div class="side-by-side">
             <div class="side-by-side-item left">
                 <h3>libreevent</h3>
+                <p>Tired of paying for event management software and want to gain control over your data? libreevent is
+                    a powerful tool to sell tickets for your next event. Complete with mobile apps for entry control</p>
+                <a href="/projects/libreevent" class="button">Details</a>
             </div>
             <div class="side-by-side-item right">
                 <h3>MusicPlayer</h3>
+                <p>A browser-based Music Player with remote playlist sharing and support for your local playlists, as
+                    well as Apple Music</p>
+                <a href="/projects/musicplayer" class="button">Details</a>
             </div>
         </div>
         <div class="side-by-side">
             <div class="side-by-side-item left">
                 <h3>impress</h3>
+                <p>A JavaScript library to create fancy browser-based presentations in 3D</p>
+                <a href="/projects/impress" class="button">Details</a>
             </div>
             <div class="side-by-side-item right">
                 <h3>Arch-Dev-VM</h3>
+                <p>Looking for an easy to set up Arch Linux virtual machine for development? The scripts here allow you
+                    to set up an Arch Linux Virtual Machine in under 1 hour, of which most time is waiting for downloads
+                    to finish.</p>
+                <a href="https://github.com/janishutz/arch-dev-vm" class="button">GitHub</a>
             </div>
         </div>
         <div class="side-by-side">
             <div class="side-by-side-item left">
                 <h3>BiogasControllerApp</h3>
+                <p>A small KivyMD-based application to control a small Biogas Plant in the subject ENATECH at
+                    Kantonsschule Wohlen</p>
+                <a href="/projects/biogascontrollerapp" class="button">Details</a>
             </div>
             <div class="side-by-side-item right">
                 <h3>Small School Projects</h3>
+                <p>Various small projects I did during my time at Kantonsschule Wohlen</p>
+                <a href="/projects/schoolprojects" class="button">Details</a>
             </div>
         </div>
 
+        <hr class="divider" style="margin-top: 75px;">
+
         <h2 id="ios">iOS Apps</h2>
+        <p>Apps designed for your phone and tablet</p>
         <div class="side-by-side">
             <div class="side-by-side-item left">
                 <h3>StorageManager</h3>
+                <p>Missing stock keeping in your home storage? Keep throwing food away because it went bad?
+                    StorageManager aims to help you with this by providing easy to use tools to keep track of what you
+                    have</p>
+                <a href="/projects/storagemanager" class="button">Details</a>
             </div>
             <div class="side-by-side-item right">
                 <h3>QR &amp; Barcode Insight</h3>
+                <p>QR Codes have become a massive security risk. QR &amp; Barcode Insight helps protect you by showing
+                    you the unfiltered content of QR codes as well as the option to check the scanned links with
+                    Google's Safe Search API</p>
+                <a href="/projects/qrscanner" class="button">Details</a>
             </div>
         </div>
 
+        <hr class="divider" style="margin-top: 75px;">
+
         <h2 id="proprietary">Proprietary Software</h2>
+        <p>Cross-Platform apps, available in browsers or even app stores!</p>
         <div class="side-by-side">
             <div class="side-by-side-item left">
                 <h3>ConductorCalc</h3>
+                <p>Your all-in-one solution for calculating parameters when designing high-voltage lines</p>
+                <a href="https://conductorcalc.com" target="_blank" class="button">Details</a>
             </div>
             <div class="side-by-side-item right">
                 <h3>Store</h3>
+                <p>The way to buy my software and support the development of my open source software</p>
+                <a href="/projects/store" class="button">Details</a>
             </div>
         </div>
         <div class="side-by-side">
             <div class="side-by-side-item left">
-                <h3>id.janishutz.com</h3>
+                <h3>Accounts</h3>
+                <p>Tired of creating lots of accounts? All my services rely on a single account backend, not requiring
+                    you to create a new account for each</p>
+                <a href="/projects/accounts" class="button">Details</a>
             </div>
             <div class="side-by-side-item right">
                 <h3>Language School Hossegor Booking System</h3>
+                <p>A fully featured booking system for a French language school, written from scratch specifically for
+                    their purposes with a highly customizable booking process.</p>
+                <a href="/projects/languageschoolhossegor-booking" class="button">Details</a>
             </div>
         </div>
     </div>

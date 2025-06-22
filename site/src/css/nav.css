@@ -1,11 +1,10 @@
 nav {
     width: 100vw;
-    height: 20vh;
-    
+    height: 15vh;
 }
 
 .nav-placeholder {
-    height: 20vh;
+    height: 15vh;
 }
 
 .nav-menu .logo-wrapper {
@@ -25,7 +24,7 @@ nav {
 
 nav a {
     /* TODO: Update colours */
-    color: var( --color-text-primary );
+    color: var(--color-text-primary);
     text-decoration: none;
     transform: scale(1);
     transition: transform 0.75s;
@@ -50,17 +49,17 @@ nav a:hover {
 .nav-menu {
     position: fixed;
     left: -100vw;
-    top: 20vh;
+    top: 15vh;
     padding-top: 2.5vh;
     padding-bottom: 2.5vh;
     padding-left: 2.5vw;
     padding-right: 2.5vw;
-    height: 75vh;
+    height: 80vh;
     width: 95vw;
     display: flex;
     flex-direction: column;
     z-index: 100;
-    background-color: var( --color-background-accent );
+    background-color: var(--color-background-accent);
     transition: left 0.5s, top 0.5s;
 }
 
@@ -69,8 +68,8 @@ nav a:hover {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 20vh;
-    background-color: var( --color-background-accent );
+    height: 15vh;
+    background-color: var(--color-background-accent);
     display: flex;
     align-items: center;
     z-index: 100;
@@ -120,7 +119,7 @@ nav a:hover {
     margin-left: auto;
     margin-right: 20px;
     text-decoration: none;
-    color: var( --color-text-primary );
+    color: var(--color-text-primary);
     font-size: 5vh;
     cursor: pointer;
     width: 35px;
@@ -136,7 +135,7 @@ nav a:hover {
     display: block;
     width: 100%;
     height: 2px;
-    background-color: var( --color-text-primary );
+    background-color: var(--color-text-primary);
 }
 
 #line1 {
@@ -154,7 +153,7 @@ nav a:hover {
 }
 
 .nav-toggle.active #line1 {
-    transform: rotate( 45deg ) scaleX( 0.95 );
+    transform: rotate(45deg) scaleX(0.95);
 }
 
 .nav-toggle.active #line2 {
@@ -162,13 +161,21 @@ nav a:hover {
 }
 
 .nav-toggle.active #line3 {
-    transform: rotate( -45deg ) scaleX( 0.95 );
+    transform: rotate(-45deg) scaleX(0.95);
 }
 
 
 @media only screen and (min-width: 900px) {
+    nav {
+        height: 20vh;
+    }
+
     nav a:hover {
         transform: unset;
+    }
+
+    .nav-placeholder {
+        height: 20vh;
     }
 
     .nav-menu .logo-wrapper {
@@ -188,7 +195,7 @@ nav a:hover {
         flex-direction: row;
         top: 0;
         left: 0;
-        border-bottom: var( --color-text-primary ) 1px solid;
+        border-bottom: var(--color-text-primary) 1px solid;
     }
 
     .nav-menu.slide-up {
@@ -196,7 +203,7 @@ nav a:hover {
     }
 
     .nav-link-dropdown {
-        transform: scaleY( 0 );
+        transform: scaleY(0);
         align-items: unset;
         justify-content: unset;
         position: absolute;
@@ -205,12 +212,12 @@ nav a:hover {
         width: max-content;
         transform-origin: top;
         transition: transform 0.5s;
-        background-color: var( --color-background-primary );
+        background-color: var(--color-background-primary);
         border-radius: 10px;
         padding: 15px;
         z-index: 2;
     }
-    
+
     .nav-link-wrapper {
         display: flex;
         justify-content: center;
@@ -222,7 +229,7 @@ nav a:hover {
         margin-right: 3%;
         margin-bottom: unset;
     }
-    
+
     .nav-link-header {
         flex-direction: column;
         min-width: 100px;
@@ -233,9 +240,10 @@ nav a:hover {
         z-index: 3;
     }
 
-    .nav-link-header::before, .nav-link-header::after {
+    .nav-link-header::before,
+    .nav-link-header::after {
         opacity: 0;
-        border: var( --color-background-primary ) 15px solid;
+        border: var(--color-background-primary) 15px solid;
         border-top-color: transparent;
         width: 20px;
         height: 20px;
@@ -245,36 +253,37 @@ nav a:hover {
         transition: opacity 0.4s;
         bottom: -15px;
     }
-    
+
     .nav-link-header::before {
         border-left-color: transparent;
         border-bottom-right-radius: 30px;
-        right: calc( 100% - 15px );
+        right: calc(100% - 15px);
     }
-    
+
     .nav-link-header::after {
         border-right-color: transparent;
         border-bottom-left-radius: 30px;
-        left: calc( 100% - 15px );
+        left: calc(100% - 15px);
     }
 
     .nav-link-dropdown a:hover {
         text-decoration: underline;
     }
-    
+
     .nav-link-wrapper:hover .nav-link-header {
-        background-color: var( --color-background-primary );
-    }
-    
-    .nav-link-wrapper:hover .nav-link-dropdown {
-        transform: scaleY( 1 );
+        background-color: var(--color-background-primary);
     }
 
-    .nav-link-wrapper:hover .nav-link-header::before, .nav-link-wrapper:hover .nav-link-header::after {
+    .nav-link-wrapper:hover .nav-link-dropdown {
+        transform: scaleY(1);
+    }
+
+    .nav-link-wrapper:hover .nav-link-header::before,
+    .nav-link-wrapper:hover .nav-link-header::after {
         transition-delay: 0.1s;
         opacity: 1;
     }
-    
+
     .nav-toggle {
         display: none;
     }

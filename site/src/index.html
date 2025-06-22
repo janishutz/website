@@ -27,7 +27,7 @@
 <body>
     <nav></nav>
     <!-- <video src="https://static.janishutz.com/assets/video-home.mp4" autoplay class="title-video"></video> -->
-    <div class="slider" style="width: 100vw; height: 80vh;">
+    <div class="slider">
         <div class="slider-container">
             <div class="slider-element current"
                 style="background-image: url( 'https://static.janishutz.com/assets/home/home-store.jpg' );">
@@ -54,8 +54,11 @@
                 </div>
             </div>
         </div>
-        <div class="slider-controls slider-control-left" onclick="sliderControl( 'previous' )">&#11164;</div>
-        <div class="slider-controls slider-control-right" onclick="sliderControl( 'next' )">&#11166;</div>
+        <span class="slider-controls slider-control-left material-symbols-outlined"
+            onclick="sliderControl( 'previous' )">arrow_back</span>
+        <span class="slider-controls slider-control-right material-symbols-outlined"
+            onclick="sliderControl( 'next' )">arrow_forward
+    </div>
     </div>
 
     <div class="content">
@@ -86,7 +89,7 @@
             <div class="side-by-side-item right">
                 <h3>Free & Open Source Software</h3>
                 <p>Various open source projects are in the works at janishutz.com, with help from the community.</p>
-                <a href="https://janishutz.com/projects#foss" class="button">Projects</a>
+                <a href="/projects#foss" class="button">Projects</a>
             </div>
         </div>
         <div class="side-by-side">
@@ -94,12 +97,12 @@
                 <h3>iOS Apps</h3>
                 <p>Apps to improve your day-to-day life by providing useful features helping you stay safe and
                     organized.</p>
-                <a href="https://janishutz.com/projects#ios" class="button">iOS Apps</a>
+                <a href="/projects#ios" class="button">iOS Apps</a>
             </div>
             <div class="side-by-side-item right">
                 <h3>ConductorCalc</h3>
                 <p>Professional wire calculation software to aid in building high voltage lines safely</p>
-                <a href="https://conductorcalc.com" class="button">ConductorCalc</a>
+                <a href="https://conductorcalc.com" class="button" target="_blank">ConductorCalc</a>
             </div>
         </div>
     </div>
