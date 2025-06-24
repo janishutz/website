@@ -29,7 +29,6 @@
 <body>
     <nav></nav>
 
-    <!-- TODO: Think about mobile design of slider -->
     <div class="slider">
         <div class="slider-container">
             <div class="slider-element current"
@@ -67,17 +66,20 @@
                 <a href="https://libreevent.janishutz.com" class="button">Learn more about libreǝvent</a>
             </div>
         </div>
-        <span class="slider-controls slider-control-left material-symbols-outlined" onclick="sliderControl( 'previous' )">arrow_back</span>
-        <span class="slider-controls slider-control-right material-symbols-outlined" onclick="sliderControl( 'next' )">arrow_forward</div>
+        <span class="slider-controls slider-control-left material-symbols-outlined"
+            onclick="sliderControl( 'previous' )">arrow_back</span>
+        <span class="slider-controls slider-control-right material-symbols-outlined"
+            onclick="sliderControl( 'next' )">arrow_forward
+    </div>
     </div>
 
     <div class="content">
-        <!-- TODO: Size logo better -->
-        <img src="https://libreevent.janishutz.com/assets/logo.png" alt="libreevent logo" class="project-logo">
-        <h1>libreǝvent</h1>
+        <img src="https://static.janishutz.com/logo.jpg" alt="store logo" class="project-logo">
+        <h1>Store</h1>
 
         <a href="/projects" class="back-button">&leftarrow; All projects</a>
-        <p>Free & Open Source Event Management & Ticketing Solution</p>
+        <p>Support my work and buy software</p>
+        <a href="https://store.janishutz.com" target="_blank" class="button">Store</a>
 
         <hr class="pullquote-lines">
         <h3 class="content-title-small">Why use a commercial event management solution, if you can host a more flexible
@@ -85,23 +87,12 @@
         <hr class="pullquote-lines">
     </div>
 
-    <div id="yt-embed"></div>
-
-    <div class="content">
-        <h2>Project Website</h2>
-        <p>libreevent has its own project website, where you can learn more about the project, find documentation and a
-            guide on how to install it.</p>
-        <a href="https://libreevent.janishutz.com" target="_blank" class="button">Project Website</a>
-    </div>
-
 
     <footer></footer>
 
 
-    <script src="https://static.janishutz.com/js/yt-embed.js"></script>
     <script src="https://static.janishutz.com/js/slider.js"></script>
     <script>
-        YTEmbed('yt-embed', 'UYMa-xTyZYo');
         activateSlider(7500);
     </script>
 </body>
