@@ -10,10 +10,12 @@
 :root.light {
     --color-text-primary: black;
     --color-text-accent: #303030;
-    --color-link: rgb(10, 10, 100);
+    --color-link: #1e24a1ff;
     --color-background-primary: white;
     --color-background-accent: rgb(226, 226, 226);
     --color-background-analytics: rgb(193, 193, 223);
+    --color-background-yt-embed: rgb(173, 173, 173);
+    --color-slider-info: rgba(255, 255, 255, 0.85);
     --color-button: rgb(21, 43, 92);
     --color-button-hover: rgb(2, 10, 27);
 }
@@ -21,10 +23,12 @@
 :root.dark {
     --color-text-primary: white;
     --color-text-accent: #b5b5b5;
-    --color-link: rgb(0, 70, 150);
+    --color-link: #005aacff;
     --color-background-primary: #151515;
     --color-background-accent: black;
     --color-background-analytics: #303030;
+    --color-background-yt-embed: #404040;
+    --color-slider-info: rgba(0, 0, 0, 0.85);
     --color-button: rgb(20, 150, 200);
     --color-button-hover: rgb(15, 125, 175);
 }
@@ -33,10 +37,12 @@
     :root {
         --color-text-primary: white;
         --color-text-accent: #b5b5b5;
-        --color-link: rgb(0, 70, 150);
+        --color-link: #005aacff;
         --color-background-primary: #151515;
         --color-background-accent: black;
         --color-background-analytics: #303030;
+        --color-background-yt-embed: #404040;
+        --color-slider-info: rgba(0, 0, 0, 0.85);
         --color-button: rgb(20, 150, 200);
         --color-button-hover: rgb(15, 125, 175);
     }
@@ -61,6 +67,10 @@ body {
 
 body.loaded {
     transition: color 0.5s, background-color 0.5s;
+}
+
+a {
+    color: var(--color-link);
 }
 
 .material-symbols-outlined {
@@ -121,7 +131,7 @@ body.loaded {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: var(--color-slider-info);
     padding: 20px;
     border-radius: 20px;
     max-width: 70%;
@@ -132,7 +142,14 @@ body.loaded {
     padding: 0.25rem 0.5rem;
 }
 
+.offset-button {
+    position: absolute;
+    bottom: 5%;
+}
 
+.yt-embed {
+    background-color: var(--color-background-yt-embed) !important;
+}
 
 .pullquote-lines {
     border-color: var(--color-text-primary);
@@ -163,6 +180,11 @@ body.loaded {
     width: 80vw;
     height: auto;
     border-radius: 20px;
+}
+
+.project-logo.small-logo {
+    width: 25%;
+    height: auto;
 }
 
 .inline-elements {

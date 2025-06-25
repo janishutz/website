@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://static.janishutz.com/css/slider.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/side-by-side.css">
+
+    <!-- SEO -->
+    <title>MusicPlayer - Fully browser based with built-in remote playlist display with animations | janishutz.com
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <meta name="keywords" content="software store, donations" />
+    <meta name="description"
+        content="libreevent is a free and open source event management solution that enables you to sell tickets for your next event, including a seat plan and many more settings." />
+    <meta name="og:title"
+        content="MusicPlayer - Fully browser based with built-in remote playlist display with animations" />
+    <meta name="og:description"
+        content="libreevent is a free and open source event management solution that enables you to sell tickets for your next event, including a seat plan and many more settings." />
+    <meta name="og:image" content="https://static.janishutz.com/seo/projects/store.jpg" />
+    <meta name="og:type" content="website" />
+    <meta name="og:url" content="https://janishutz.com/projects/store" />
+    <meta name="og:locale" content="en_GB" />
+    <meta property="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#152b5c">
+</head>
+
+<body>
+    <nav></nav>
+
+    <div class="slider">
+        <div class="slider-container">
+            <div class="slider-element current"
+                style="background-image: url( 'https://store-cdn.janishutz.com/assets/musicplayer/musicplayer-sources.jpg' );">
+                <div class="slider-info">
+                    <h2>Sources</h2>
+                    <p>Play your local music or use Apple Music (Apple Music Subscription required)</p>
+                    <a href="https://music.janishutz.com/" class="button">Website</a>
+                </div>
+            </div>
+            <div class="slider-element"
+                style="background-image: url( 'https://store-cdn.janishutz.com/assets/musicplayer/musicplayer-fancy.jpg' );">
+                <div class="slider-info">
+                    <h2>Shared Playlists</h2>
+                    <p>Seamlessly sync and display what you are currently playing on other devices. Perfect for your
+                        next party!</p>
+                    <a href="https://music.janishutz.com/get" class="button">Get it today</a>
+                </div>
+            </div>
+            <div class="slider-element"
+                style="background-image: url( 'https://store-cdn.janishutz.com/assets/musicplayer/musicplayer-player.jpg' );">
+                <div class="slider-info">
+                    <h2>Browser based</h2>
+                    <p>No need to install anything. Runs on any platform</p>
+                    <a href="https://music.janishutz.com/get" class="button">Get it today</a>
+                </div>
+            </div>
+            <div class="slider-element"
+                style="background-image: url( 'https://static.janishutz.com/assets/musicplayer/musicplayer-main.jpg' );">
+                <div class="slider-info">
+                    <h2>Hosted for you</h2>
+                    <p>Need the convenience of an already set up version?</p>
+                    <a href="https://music.janishutz.com/" class="button">Website</a>
+                </div>
+            </div>
+            <div class="slider-element"
+                style="background-image: url( 'https://static.janishutz.com/assets/musicplayer/musicplayer-code.jpg' );">
+                <div class="slider-info">
+                    <h2>Open Source</h2>
+                    <p>Developed by Janis Hutz &amp; the community</p>
+                    <a href="https://github.com/janishutz/MusicPlayerV2" class="button">GitHub</a>
+                </div>
+            </div>
+            <div class="slider-element"
+                style="background-image: url( 'https://static.janishutz.com/assets/musicplayer/musicplayer-home.jpg' );">
+                <div class="slider-info">
+                    <h2>Self-Hostable</h2>
+                    <p>Host it yourself. You need to be member of the Apple Developer Program for access to the Apple
+                        Music API</p>
+                    <a href="https://github.com/janishutz/MusicPlayerV2/wiki/Installation" class="button">Docs</a>
+                </div>
+            </div>
+        </div>
+        <span class="slider-controls slider-control-left material-symbols-outlined"
+            onclick="sliderControl( 'previous' )">arrow_back</span>
+        <span class="slider-controls slider-control-right material-symbols-outlined"
+            onclick="sliderControl( 'next' )">arrow_forward
+    </div>
+
+    <div class="content">
+        <img src="https://github.com/janishutz/MusicPlayerV2/raw/master/assets/logo.png" alt="MusicPlayer logo"
+            class="project-logo">
+        <h1>Music&shy;Player</h1>
+
+        <a href="/projects" class="back-button">&leftarrow; All projects</a>
+        <p>Play music fully in the browser and remotely share what you are currently playing. Perfect for your next
+            party!</p>
+        <a href="https://music.janishutz.com" target="_blank" class="button">Get it today</a>
+
+        <hr class="divider">
+
+        <h2>Features</h2>
+        <div class="side-by-side">
+            <div class="side-by-side-item left">
+                <h3>Remote Playback Status</h3>
+                <p>Remotely display what is currently playing via a link you can share. There is an additional link that
+                    can be used to display the same information, but with animations that sync to the music (Microphone
+                    access required on the target device and animations will sync up to the sound audible on that
+                    device)</p>
+            </div>
+            <div class="side-by-side-item right">
+                <h3>Two Sources</h3>
+                <p>You can choose between two sources for audio: Your local disk or Apple Music and you can mix the two
+                    in a single playlist. Cover Art and song information is fetched from the Apple Music API
+                    automatically if you are using the hosted version or have configured the Apple Music API
+                    authentication tokens</p>
+            </div>
+        </div>
+        <div class="side-by-side">
+            <div class="side-by-side-item left">
+                <h3>Fully Featured Player</h3>
+                <p>All the features you'd expect from a Music Player are present in MusicPlayer. Shuffle, Repeat,
+                    Playlist support, adding more songs to queue, just to name a few, are all present.</p>
+            </div>
+            <div class="side-by-side-item right">
+                <h3>Browser based</h3>
+                <p>There is no need to install anything. MusicPlayer runs fully in your browser and is thus cross
+                    platform. You could even run it off of your phone, if you wish!</p>
+            </div>
+        </div>
+
+        <a href="https://music.janishutz.com" target="_blank" class="button" style="margin-top: 50px;">Get it today</a>
+    </div>
+
+
+    <footer></footer>
+
+
+    <script src="https://static.janishutz.com/js/slider.js"></script>
+    <script>
+        activateSlider(7500);
+    </script>
+</body>
+
+</html>
