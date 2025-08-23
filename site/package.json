@@ -7,5 +7,11 @@
   },
   "author": "Janis Hutz",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.34.0",
+    "@stylistic/eslint-plugin": "^5.2.3",
+    "eslint-plugin-vue": "^10.4.0",
+    "typescript-eslint": "^8.40.0"
+  }
 }
