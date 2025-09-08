@@ -74,6 +74,6 @@ for ( let file in filesToParse ) {
 
 // Copy all JS, CSS and jpg files
 copyFiles( './src', '.js' );
-// copyFiles( './src', '.css' );
+copyFiles( './src', '.css' );
 
 console.log( '\n==> DONE\n\n' );
