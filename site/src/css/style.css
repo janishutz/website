@@ -190,6 +190,15 @@ a {
 .inline-elements {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 999px) {
+    .inline-elements .button {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 .inline-elements * {
