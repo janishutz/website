@@ -5,7 +5,7 @@
 
 This is the source code for my personal website. Check it out [here](https://janishutz.com).
 
-As any custom website is, this one is also written entirely in HTML, CSS and JavaScript and now doesn't even use any external libraries
+As any custom website is, this one is also written entirely in HTML, CSS and JavaScript and now doesn't even use any external libraries (apart from my own)
 
 # Building
-cd to the site directory and run `npm run build`
+cd to the site directory and run `node build.js`
