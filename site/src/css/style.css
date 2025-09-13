@@ -142,6 +142,16 @@ a {
     padding: 0.25rem 0.5rem;
 }
 
+.slider-control-left {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.slider-control-right {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
 .offset-button {
     position: absolute;
     bottom: 5%;
