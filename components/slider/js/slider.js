@@ -1,3 +1,4 @@
+/* eslint-disable no-var */
 const fetchedElements = document.getElementsByClassName('slider-element');
 const sliderElements = [];
 let okToMove = true;
@@ -35,7 +36,8 @@ function sliderGoToIndex(index) {
             // Determine move direction:
             // true = next, false = previous
             let moveDirection = true;
-            if ((index < currentSlideIndex || (index === sliderElements.length - 1 && currentSlideIndex === 0)) && !(index === 0 && currentSlideIndex === sliderElements.length - 1)) {
+            if ((index < currentSlideIndex || (index === sliderElements.length - 1 && currentSlideIndex === 0))
+                && !(index === 0 && currentSlideIndex === sliderElements.length - 1)) {
                 moveDirection = false;
             }
             /*
@@ -85,7 +87,8 @@ function sliderGoToIndex(index) {
         }
     }
 }
-function sliderControl(action) {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+var sliderControl = (action) => {
     if (action === 'next') {
         sliderGoToIndex(currentSlideIndex + 1);
     }
@@ -93,10 +96,16 @@ function sliderControl(action) {
         sliderGoToIndex(currentSlideIndex - 1);
     }
     sliderAutoAdvance();
-}
+};
 let sliderAutoAdvanceInterval = 0;
 let sliderInterval = 0;
-function activateSlider(interval) {
+/**
+ * Set up the slider and give it an interval for auto advancing
+ * @param interval - The interval at which to auto advance
+ * @param name - The name of the platform (like desktop, used to load different images)
+ */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+var activateSlider = (interval, name) => {
     sliderAutoAdvanceInterval = interval;
     sliderContainer.addEventListener('mouseenter', () => {
         stopSliderAutoAdvance();
@@ -111,7 +120,8 @@ function activateSlider(interval) {
         sliderAutoAdvance();
     });
     sliderAutoAdvance();
-}
+    loadImageType(name);
+};
 const sliderAutoAdvance = () => {
     if (sliderAutoAdvanceInterval > 0) {
         stopSliderAutoAdvance();
@@ -124,10 +134,38 @@ const stopSliderAutoAdvance = () => {
     try {
         clearInterval(sliderInterval);
     }
-    catch (e) { }
-    ;
+    catch (e) {
+        console.debug(e);
+    }
 };
-for (let el in fetchedElements) {
+const allowedExtensions = [
+    'webp',
+    'jpg',
+    'jpeg',
+    'svg',
+    'png'
+];
+/**
+ * Load type of image, can be used to load images for different platforms (i.e. mobile optimization)
+ * @param name - The name appended to the image filename
+ */
+var loadImageType = (name) => {
+    sliderElements.forEach(el => {
+        const baseURL = el.dataset.imageBaseURL;
+        const filetype = el.dataset.filetype;
+        // TODO: Verification (i.e. baseURL cannot contain .something in the end, filetype may only be jpg, jpeg, webp, svg or png)
+        if (allowedExtensions.indexOf(filetype) === -1) {
+            console.warn('[ SLIDER ] Invalid filetype ' + filetype + ' for image element with id ' + el.id);
+            return;
+        }
+        if (baseURL.lastIndexOf('.') > baseURL.lastIndexOf('/')) {
+            console.warn('[ SLIDER ] ImageBaseURL incorrect for image element with id ' + el.id);
+            return;
+        }
+        el.style.setProperty('background-image', baseURL + name + filetype);
+    });
+};
+for (const el in fetchedElements) {
     if (fetchedElements[el].className) {
         sliderElements.push(fetchedElements[el]);
     }

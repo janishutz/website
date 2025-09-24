@@ -1,8 +1,11 @@
+/* eslint-disable no-var */
 const fetchedElements = document.getElementsByClassName( 'slider-element' );
 const sliderElements: HTMLDivElement[] = [];
+
 let okToMove = true;
 let currentSlideIndex = 0;
-const sliderContainer: HTMLDivElement = ( document.getElementsByClassName( 'slider-container' )[ 0 ] as HTMLDivElement );
+
+const sliderContainer: HTMLDivElement = document.getElementsByClassName( 'slider-container' )[ 0 ] as HTMLDivElement;
 
 function sliderGoToIndex ( index: number ) {
     if ( okToMove ) {
@@ -12,6 +15,7 @@ function sliderGoToIndex ( index: number ) {
             let previousElement = 0;
             let nextElement = 0;
             let beforePreviousElement = 0;
+
             if ( index < sliderElements.length - 1 ) {
                 nextElement = index + 1;
             } else {
@@ -35,12 +39,16 @@ function sliderGoToIndex ( index: number ) {
             // Determine move direction:
             // true = next, false = previous
             let moveDirection = true;
-            if ( ( index < currentSlideIndex || ( index === sliderElements.length - 1 && currentSlideIndex === 0 ) ) && !( index === 0 && currentSlideIndex === sliderElements.length - 1 ) ) {
+
+            if (
+                ( index < currentSlideIndex || ( index === sliderElements.length - 1 && currentSlideIndex === 0 ) )
+                && !( index === 0 && currentSlideIndex === sliderElements.length - 1 )
+            ) {
                 moveDirection = false;
             }
 
-            /* 
-                Add correct classes to all elements 
+            /*
+                Add correct classes to all elements
             */
 
             // New current element
@@ -55,19 +63,20 @@ function sliderGoToIndex ( index: number ) {
             } else {
                 sliderElements[ nextElement ].classList.add( 'next' );
             }
+
             sliderElements[ nextElement ].classList.remove( 'current' );
             sliderElements[ nextElement ].classList.remove( 'past' );
             sliderElements[ nextElement ].classList.remove( 'last' );
 
             // new past element
             sliderElements[ previousElement ].classList.add( 'last' );
-            sliderElements[ previousElement ].classList.remove( 'current' ); 
-            sliderElements[ previousElement ].classList.remove( 'past' ); 
-            sliderElements[ previousElement ].classList.remove( 'next' ); 
+            sliderElements[ previousElement ].classList.remove( 'current' );
+            sliderElements[ previousElement ].classList.remove( 'past' );
+            sliderElements[ previousElement ].classList.remove( 'next' );
             sliderElements[ beforePreviousElement ].classList.add( 'past' );
             sliderElements[ beforePreviousElement ].classList.remove( 'last' );
-            sliderElements[ beforePreviousElement ].classList.remove( 'next' ); 
-            sliderElements[ beforePreviousElement ].classList.remove( 'current' ); 
+            sliderElements[ beforePreviousElement ].classList.remove( 'next' );
+            sliderElements[ beforePreviousElement ].classList.remove( 'current' );
 
             // Glitch fixes
             setTimeout( () => {
@@ -75,6 +84,7 @@ function sliderGoToIndex ( index: number ) {
                     sliderElements[ nextElement ].classList.add( 'next' );
                     sliderElements[ nextElement ].classList.remove( 'future' );
                 }
+
                 currentSlideIndex = index;
                 setTimeout( () => {
                     okToMove = true;
@@ -90,7 +100,9 @@ function sliderGoToIndex ( index: number ) {
 
 
 type SliderAction = 'next' | 'previous';
-function sliderControl ( action: SliderAction ) {
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+var sliderControl = ( action: SliderAction ) => {
     if ( action === 'next' ) {
         sliderGoToIndex( currentSlideIndex + 1 );
     } else if ( action === 'previous' ) {
@@ -98,14 +110,22 @@ function sliderControl ( action: SliderAction ) {
     }
 
     sliderAutoAdvance();
-}
+};
 
 let sliderAutoAdvanceInterval = 0;
 let sliderInterval = 0;
-function activateSlider ( interval: number ) {
+
+
+/**
+ * Set up the slider and give it an interval for auto advancing
+ * @param interval - The interval at which to auto advance
+ * @param name - The name of the platform (like desktop, used to load different images)
+ */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+var activateSlider = ( interval: number, name: string ) => {
     sliderAutoAdvanceInterval = interval;
     sliderContainer.addEventListener( 'mouseenter', () => {
-        stopSliderAutoAdvance()
+        stopSliderAutoAdvance();
     } );
 
     sliderContainer.addEventListener( 'mouseleave', () => {
@@ -113,7 +133,7 @@ function activateSlider ( interval: number ) {
     } );
 
     document.addEventListener( 'blur', () => {
-        stopSliderAutoAdvance()
+        stopSliderAutoAdvance();
     } );
 
     window.addEventListener( 'focus', () => {
@@ -121,7 +141,9 @@ function activateSlider ( interval: number ) {
     } );
 
     sliderAutoAdvance();
-}
+
+    loadImageType( name );
+};
 
 const sliderAutoAdvance = () => {
     if ( sliderAutoAdvanceInterval > 0 ) {
@@ -130,17 +152,57 @@ const sliderAutoAdvance = () => {
             sliderGoToIndex( currentSlideIndex + 1 );
         }, sliderAutoAdvanceInterval );
     }
-}
+};
 
 const stopSliderAutoAdvance = () => {
     try {
         clearInterval( sliderInterval );
-    } catch ( e ) {};
-}
+    } catch ( e ) {
+        console.debug( e );
+    }
+};
 
-for ( let el in fetchedElements ) {
+
+const allowedExtensions = [
+    'webp',
+    'jpg',
+    'jpeg',
+    'svg',
+    'png'
+];
+
+
+/**
+ * Load type of image, can be used to load images for different platforms (i.e. mobile optimization)
+ * @param name - The name appended to the image filename
+ */
+
+var loadImageType = ( name: string ) => {
+    sliderElements.forEach( el => {
+        const baseURL = el.dataset.imageBaseURL;
+        const filetype = el.dataset.filetype;
+
+        // TODO: Verification (i.e. baseURL cannot contain .something in the end, filetype may only be jpg, jpeg, webp, svg or png)
+        if ( allowedExtensions.indexOf( filetype ) === -1 ) {
+            console.warn( '[ SLIDER ] Invalid filetype ' + filetype + ' for image element with id ' + el.id );
+
+            return;
+        }
+
+        if ( baseURL.lastIndexOf( '.' ) > baseURL.lastIndexOf( '/' ) ) {
+            console.warn( '[ SLIDER ] ImageBaseURL incorrect for image element with id ' + el.id );
+
+            return;
+        }
+
+        el.style.setProperty( 'background-image', baseURL + name + filetype );
+    } );
+};
+
+for ( const el in fetchedElements ) {
     if ( fetchedElements[ el ].className ) {
         sliderElements.push( ( fetchedElements[ el ] as HTMLDivElement ) );
     }
 }
-sliderGoToIndex( 0 ); 
+
+sliderGoToIndex( 0 );
