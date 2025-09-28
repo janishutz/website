@@ -147,22 +147,26 @@ const allowedExtensions = [
 ];
 /**
  * Load type of image, can be used to load images for different platforms (i.e. mobile optimization)
- * @param name - The name appended to the image filename
+ * @param postfix - What is appended to each image after a dash. Example: /path/to/image becomes /path/to/image-platform.jpg
+ * for postfix = platform
  */
-var loadImageType = (name) => {
+var loadImageType = (postfix) => {
     sliderElements.forEach(el => {
-        const baseURL = el.dataset.imageBaseURL;
+        const baseURL = el.dataset.imageBaseUrl;
         const filetype = el.dataset.filetype;
-        // TODO: Verification (i.e. baseURL cannot contain .something in the end, filetype may only be jpg, jpeg, webp, svg or png)
         if (allowedExtensions.indexOf(filetype) === -1) {
             console.warn('[ SLIDER ] Invalid filetype ' + filetype + ' for image element with id ' + el.id);
             return;
         }
-        if (baseURL.lastIndexOf('.') > baseURL.lastIndexOf('/')) {
-            console.warn('[ SLIDER ] ImageBaseURL incorrect for image element with id ' + el.id);
+        if (!baseURL) {
+            console.error('[ SLIDER ] ImageBaseURL undefined for element with id ' + el.id);
             return;
         }
-        el.style.setProperty('background-image', baseURL + name + filetype);
+        if (baseURL.lastIndexOf('.') > baseURL.lastIndexOf('/')) {
+            console.warn('[ SLIDER ] ImageBaseURL incorrect for element with id ' + el.id);
+            return;
+        }
+        el.style.backgroundImage = `url( ${baseURL}-${postfix + filetype} )`;
     });
 };
 for (const el in fetchedElements) {

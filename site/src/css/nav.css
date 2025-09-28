@@ -61,6 +61,7 @@ nav a:hover {
     z-index: 100;
     background-color: var(--color-background-accent);
     transition: left 0.5s, top 0.5s;
+    overflow-y: scroll;
 }
 
 .nav-top-bar {

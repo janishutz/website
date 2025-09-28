@@ -163,42 +163,6 @@ const stopSliderAutoAdvance = () => {
 };
 
 
-const allowedExtensions = [
-    'webp',
-    'jpg',
-    'jpeg',
-    'svg',
-    'png'
-];
-
-
-/**
- * Load type of image, can be used to load images for different platforms (i.e. mobile optimization)
- * @param name - The name appended to the image filename
- */
-
-var loadImageType = ( name: string ) => {
-    sliderElements.forEach( el => {
-        const baseURL = el.dataset.imageBaseURL;
-        const filetype = el.dataset.filetype;
-
-        // TODO: Verification (i.e. baseURL cannot contain .something in the end, filetype may only be jpg, jpeg, webp, svg or png)
-        if ( allowedExtensions.indexOf( filetype ) === -1 ) {
-            console.warn( '[ SLIDER ] Invalid filetype ' + filetype + ' for image element with id ' + el.id );
-
-            return;
-        }
-
-        if ( baseURL.lastIndexOf( '.' ) > baseURL.lastIndexOf( '/' ) ) {
-            console.warn( '[ SLIDER ] ImageBaseURL incorrect for image element with id ' + el.id );
-
-            return;
-        }
-
-        el.style.setProperty( 'background-image', baseURL + name + filetype );
-    } );
-};
-
 for ( const el in fetchedElements ) {
     if ( fetchedElements[ el ].className ) {
         sliderElements.push( ( fetchedElements[ el ] as HTMLDivElement ) );

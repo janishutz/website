@@ -13,9 +13,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=7" />
     <meta name="keywords" content="software store, custom software, foss" />
-    <meta name="description" content="Discover amazing software projects like ConductorCalc, libreevent, a secure and reliable authentication system and much more and get support for it all" />
+    <meta name="description"
+        content="Discover amazing software projects like ConductorCalc, libreevent, a secure and reliable authentication system and much more and get support for it all" />
     <meta name="og:title" content="janishutz.com - software to make your life easier" />
-    <meta name="og:description" content="Discover projects, services and more developed by Janis Hutz, get support and more!" />
+    <meta name="og:description"
+        content="Discover projects, services and more developed by Janis Hutz, get support and more!" />
     <meta name="og:image" content="https://static.janishutz.com/logo.jpg" />
     <meta name="og:type" content="website" />
     <meta name="og:url" content="https://janishutz.com" />
@@ -29,32 +31,33 @@
     <!-- <video src="https://static.janishutz.com/assets/video-home.mp4" autoplay class="title-video"></video> -->
     <div class="slider">
         <div class="slider-container">
-            <div class="slider-element current"
-                style="background-image: url( 'https://static.janishutz.com/assets/home/conductorcalc.jpg' );">
+            <div id="conductorcalc" class="slider-element current"
+                data-image-base-url="https://static.janishutz.com/assets/home/conductorcalc" data-filetype="jpg">
                 <div class="slider-info">
                     <h2>ConductorCalc</h2>
-                    <p>The perfect tool to aid you in the complex calculations necessary when building high voltage lines</p>
+                    <p>The perfect tool to aid you in the complex calculations necessary when building high voltage
+                        lines</p>
                     <a href="https://conductorcalc.com" class="button" target="_blank">Check it out</a>
                 </div>
             </div>
-            <div class="slider-element"
-                style="background-image: url( 'https://static.janishutz.com/assets/projects/musicplayer-title.jpg' );">
+            <div id="musicplayer" class="slider-element"
+                data-image-base-url="https://static.janishutz.com/assets/projects/musicplayer" data-filetype="jpg">
                 <div class="slider-info">
                     <h2>MusicPlayer</h2>
                     <p>Your one-stop solution for music at your next party</p>
                     <a href="/projects/musicplayer" class="button">Check it out</a>
                 </div>
             </div>
-            <div class="slider-element"
-                style="background-image: url( 'https://store-cdn.janishutz.com/assets/libreevent/libreevent-title.jpg' );">
+            <div id="libreevent" class="slider-element"
+                data-image-base-url="https://static.janishutz.com/assets/projects/libreevent" data-filetype="jpg">
                 <div class="slider-info">
                     <h2>libreǝvent</h2>
                     <p>The all-in-one solution for your next event!</p>
                     <a href="https://libreevent.janishutz.com" class="button" target="_blank">Check it out</a>
                 </div>
             </div>
-            <div class="slider-element"
-                style="background-image: url( 'https://static.janishutz.com/assets/home/foss.jpg' );">
+            <div id="foss" data-image-base-url="https://static.janishutz.com/assets/home/foss" data-filetype="jpg"
+                class="slider-element">
                 <div class="slider-info">
                     <h2>Open Source Projects</h2>
                     <p>Free Software, developed by Janis Hutz & the community</p>
@@ -118,7 +121,10 @@
     <footer></footer>
 
     <script src="https://static.janishutz.com/js/slider.js"></script>
-    <script>activateSlider(7500)</script>
+    <script>
+        activateSlider(7500);
+        loadImageType('desktop');
+    </script>
 </body>
 
 </html>
